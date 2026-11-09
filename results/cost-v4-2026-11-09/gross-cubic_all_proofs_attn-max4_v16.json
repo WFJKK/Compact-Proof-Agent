@@ -1,0 +1,294 @@
+{
+ "cost_model": "cost-v4",
+ "source": "results/gross-cubic-2026-10-16/all_proofs_attn-max4_v16.json",
+ "note": "the proofs' lengths are unchanged (counted by walking their loops, with no plan); only B, the last frontier point and the scores move",
+ "networks": {
+  "attn-max4-v16-s1": {
+   "B": 64946720,
+   "B_cost_v3": 65152067,
+   "scores": {
+    "Q": 0.5740658518465603,
+    "Q_exact": 0.9283683384942049,
+    "Q_grid": 0.5660667419433594,
+    "cost_of_finishing": 62.66573524609422,
+    "frontier": [
+     {
+      "length": 41822,
+      "certified": 14,
+      "n_inputs": 65536
+     },
+     {
+      "length": 41889,
+      "certified": 11725,
+      "n_inputs": 65536
+     },
+     {
+      "length": 43005,
+      "certified": 45719,
+      "n_inputs": 65536
+     },
+     {
+      "length": 44937,
+      "certified": 46727,
+      "n_inputs": 65536
+     },
+     {
+      "length": 292152,
+      "certified": 64769,
+      "n_inputs": 65536
+     },
+     {
+      "length": 64946720,
+      "certified": 65520,
+      "n_inputs": 65536
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.5741776800020126,
+    "Q_grid": 0.5660667419433594,
+    "cost_of_finishing": 62.72146127709739
+   }
+  },
+  "attn-max4-v16-s2": {
+   "B": 64946720,
+   "B_cost_v3": 65152067,
+   "scores": {
+    "Q": 0.5682582511435299,
+    "Q_exact": 0.9226613126351307,
+    "Q_grid": 0.5596580505371094,
+    "cost_of_finishing": 101.32300329937992,
+    "frontier": [
+     {
+      "length": 41822,
+      "certified": 15,
+      "n_inputs": 65536
+     },
+     {
+      "length": 41889,
+      "certified": 2012,
+      "n_inputs": 65536
+     },
+     {
+      "length": 43005,
+      "certified": 35944,
+      "n_inputs": 65536
+     },
+     {
+      "length": 44937,
+      "certified": 43521,
+      "n_inputs": 65536
+     },
+     {
+      "length": 292152,
+      "certified": 65183,
+      "n_inputs": 65536
+     },
+     {
+      "length": 64946720,
+      "certified": 65535,
+      "n_inputs": 65536
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.5683733525652577,
+    "Q_grid": 0.5596580505371094,
+    "cost_of_finishing": 101.46876796009936
+   }
+  },
+  "attn-max4-v16-s5": {
+   "B": 64946720,
+   "B_cost_v3": 65152067,
+   "scores": {
+    "Q": 0.5664042583899163,
+    "Q_exact": 0.9183767234715713,
+    "Q_grid": 0.5567140579223633,
+    "cost_of_finishing": 101.79514946017463,
+    "frontier": [
+     {
+      "length": 41822,
+      "certified": 11,
+      "n_inputs": 65536
+     },
+     {
+      "length": 41889,
+      "certified": 17972,
+      "n_inputs": 65536
+     },
+     {
+      "length": 43005,
+      "certified": 42820,
+      "n_inputs": 65536
+     },
+     {
+      "length": 44937,
+      "certified": 42966,
+      "n_inputs": 65536
+     },
+     {
+      "length": 52678,
+      "certified": 42975,
+      "n_inputs": 65536
+     },
+     {
+      "length": 292152,
+      "certified": 64976,
+      "n_inputs": 65536
+     },
+     {
+      "length": 64946720,
+      "certified": 65325,
+      "n_inputs": 65536
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.5665190076204423,
+    "Q_grid": 0.5567140579223633,
+    "cost_of_finishing": 101.94227674416972
+   }
+  },
+  "attn-max4-v16-s6": {
+   "B": 64946720,
+   "B_cost_v3": 65152067,
+   "scores": {
+    "Q": 0.5756166643116729,
+    "Q_exact": 0.9327415098329443,
+    "Q_grid": 0.5684270858764648,
+    "cost_of_finishing": 97.69786613645755,
+    "frontier": [
+     {
+      "length": 41822,
+      "certified": 15,
+      "n_inputs": 65536
+     },
+     {
+      "length": 41889,
+      "certified": 37,
+      "n_inputs": 65536
+     },
+     {
+      "length": 43005,
+      "certified": 35410,
+      "n_inputs": 65536
+     },
+     {
+      "length": 44937,
+      "certified": 46642,
+      "n_inputs": 65536
+     },
+     {
+      "length": 292152,
+      "certified": 65159,
+      "n_inputs": 65536
+     },
+     {
+      "length": 64946720,
+      "certified": 65535,
+      "n_inputs": 65536
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.5757296803482395,
+    "Q_grid": 0.5684270858764648,
+    "cost_of_finishing": 97.83338006675967
+   }
+  },
+  "attn-max4-v16-s8": {
+   "B": 64946720,
+   "B_cost_v3": 65152067,
+   "scores": {
+    "Q": 0.5747786477128063,
+    "Q_exact": 0.9301944931958304,
+    "Q_grid": 0.5658798217773438,
+    "cost_of_finishing": 114.41285295328821,
+    "frontier": [
+     {
+      "length": 41822,
+      "certified": 14,
+      "n_inputs": 65536
+     },
+     {
+      "length": 41889,
+      "certified": 18245,
+      "n_inputs": 65536
+     },
+     {
+      "length": 43005,
+      "certified": 45523,
+      "n_inputs": 65536
+     },
+     {
+      "length": 292152,
+      "certified": 65257,
+      "n_inputs": 65536
+     },
+     {
+      "length": 64946720,
+      "certified": 65535,
+      "n_inputs": 65536
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.5748922936818639,
+    "Q_grid": 0.5658798217773438,
+    "cost_of_finishing": 114.59874743191378
+   }
+  },
+  "attn-max4-v16-s9": {
+   "B": 64946720,
+   "B_cost_v3": 65152067,
+   "scores": {
+    "Q": 0.5699715226639461,
+    "Q_exact": 0.9250445134168584,
+    "Q_grid": 0.5607118606567383,
+    "cost_of_finishing": 177.2187877299823,
+    "frontier": [
+     {
+      "length": 41822,
+      "certified": 15,
+      "n_inputs": 65536
+     },
+     {
+      "length": 41889,
+      "certified": 6507,
+      "n_inputs": 65536
+     },
+     {
+      "length": 43005,
+      "certified": 41006,
+      "n_inputs": 65536
+     },
+     {
+      "length": 44937,
+      "certified": 42490,
+      "n_inputs": 65536
+     },
+     {
+      "length": 45210,
+      "certified": 43243,
+      "n_inputs": 65536
+     },
+     {
+      "length": 292152,
+      "certified": 65460,
+      "n_inputs": 65536
+     },
+     {
+      "length": 64946720,
+      "certified": 65535,
+      "n_inputs": 65536
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.5700873026215103,
+    "Q_grid": 0.5607118606567383,
+    "cost_of_finishing": 177.66518744082177
+   }
+  }
+ }
+}

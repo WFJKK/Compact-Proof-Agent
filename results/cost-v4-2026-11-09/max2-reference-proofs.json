@@ -1,0 +1,1639 @@
+{
+ "cost_model": "cost-v4",
+ "source": "results/max2-2026-10-13/reference_proofs.json (cost-v2, the same lengths as cost-v3)",
+ "checked": [
+  "brute_force",
+  "symmetry",
+  "cubic",
+  "cubic_knob"
+ ],
+ "estimated": [
+  "convexity_loss",
+  "convexity_accuracy",
+  "hybrid",
+  "convexity_accuracy+cubic",
+  "convexity_accuracy+hybrid"
+ ],
+ "medians": {
+  "v128": {
+   "networks": 6,
+   "brute_force": {
+    "length": 40358144.0,
+    "accuracy": 0.99993896484375
+   },
+   "symmetry": {
+    "length": 20338880.0,
+    "accuracy": 0.99993896484375
+   },
+   "cubic": {
+    "length": 2444929.0,
+    "accuracy": 0.99993896484375
+   },
+   "convexity_loss": {
+    "length": 357000.0,
+    "accuracy": 0.00787353515625
+   },
+   "convexity_accuracy": {
+    "length": 365256.0,
+    "accuracy": 0.36444091796875
+   },
+   "hybrid": {
+    "length": 1925446.0,
+    "accuracy": 0.99993896484375
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 320511.0,
+     "accuracy": 0.00994873046875
+    },
+    {
+     "knob": 0.25,
+     "length": 366845.0,
+     "accuracy": 0.03167724609375
+    },
+    {
+     "knob": 0.5,
+     "length": 512249.0,
+     "accuracy": 0.10028076171875
+    },
+    {
+     "knob": 0.75,
+     "length": 973289.0,
+     "accuracy": 0.31719970703125
+    },
+    {
+     "knob": 1.0,
+     "length": 2444929.0,
+     "accuracy": 0.99993896484375
+    }
+   ],
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.07501079210055249,
+     "Q_exact": 0.09919532909831653,
+     "cost_of_finishing": 1.9842854670463663
+    },
+    "cubic": {
+     "Q": 0.30691107868375544,
+     "Q_exact": 0.4058635377845877,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "cubic_knob": {
+     "Q": 0.34724602696379836,
+     "Q_exact": 0.45920304209803386,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "convexity_loss": {
+     "Q": 0.004074981298640418,
+     "Q_exact": 0.005388812725057789,
+     "cost_of_finishing": 0.9990896016322436
+    },
+    "convexity_accuracy": {
+     "Q": 0.1877058166516158,
+     "Q_exact": 0.2482248185229889,
+     "cost_of_finishing": 1.5515865330241003
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.382759112827851,
+     "Q_exact": 0.5061660475660901,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "hybrid": {
+     "Q": 0.33305739399390333,
+     "Q_exact": 0.4404397938041448,
+     "cost_of_finishing": 20.960431747712036
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.3993754956374436,
+     "Q_exact": 0.528139786478374,
+     "cost_of_finishing": 20.960431747712036
+    }
+   }
+  },
+  "v64": {
+   "networks": 6,
+   "brute_force": {
+    "length": 2683968.0,
+    "accuracy": 0.9990234375
+   },
+   "symmetry": {
+    "length": 1363488.0,
+    "accuracy": 0.9990234375
+   },
+   "cubic": {
+    "length": 311682.0,
+    "accuracy": 0.9990234375
+   },
+   "convexity_loss": {
+    "length": 52584.0,
+    "accuracy": 0.01513671875
+   },
+   "convexity_accuracy": {
+    "length": 54664.0,
+    "accuracy": 0.3941650390625
+   },
+   "hybrid": {
+    "length": 242447.5,
+    "accuracy": 0.9990234375
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 40639.0,
+     "accuracy": 0.009521484375
+    },
+    {
+     "knob": 0.25,
+     "length": 46462.0,
+     "accuracy": 0.03125
+    },
+    {
+     "knob": 0.5,
+     "length": 65084.0,
+     "accuracy": 0.1005859375
+    },
+    {
+     "knob": 0.75,
+     "length": 123572.0,
+     "accuracy": 0.31787109375
+    },
+    {
+     "knob": 1.0,
+     "length": 311682.0,
+     "accuracy": 0.9990234375
+    }
+   ],
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.08662320839353274,
+     "Q_exact": 0.09794626035542586,
+     "cost_of_finishing": 1.968457368161656
+    },
+    "cubic": {
+     "Q": 0.2753866697174368,
+     "Q_exact": 0.3113841538634528,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "cubic_knob": {
+     "Q": 0.32280607665829947,
+     "Q_exact": 0.36500204292880845,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "convexity_loss": {
+     "Q": 0.007621235149596532,
+     "Q_exact": 0.008617453636686543,
+     "cost_of_finishing": 0.9965334521743346
+    },
+    "convexity_accuracy": {
+     "Q": 0.19650172170185337,
+     "Q_exact": 0.22218766945991014,
+     "cost_of_finishing": 1.599208832297421
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.36328745268698653,
+     "Q_exact": 0.41077498841979654,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "hybrid": {
+     "Q": 0.3076272063136559,
+     "Q_exact": 0.3478390491509342,
+     "cost_of_finishing": 11.07032701508241
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.38279811009262554,
+     "Q_exact": 0.4328360037688991,
+     "cost_of_finishing": 11.07032701508241
+    }
+   }
+  }
+ },
+ "networks": {
+  "max2-v128-s0": {
+   "setting": "v128",
+   "V": 128,
+   "E": 4352,
+   "B": 40358144,
+   "real_correct": 16383,
+   "n_inputs": 16384,
+   "brute_force": {
+    "length": 40358144,
+    "certified": 16383
+   },
+   "symmetry": {
+    "length": 20338880,
+    "certified": 16383
+   },
+   "cubic": {
+    "length": 2444929,
+    "certified": 16383
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 320511,
+     "certified": 163
+    },
+    {
+     "knob": 0.25,
+     "length": 366845,
+     "certified": 519
+    },
+    {
+     "knob": 0.5,
+     "length": 512249,
+     "certified": 1643
+    },
+    {
+     "knob": 0.75,
+     "length": 973289,
+     "certified": 5197
+    },
+    {
+     "knob": 1.0,
+     "length": 2444929,
+     "certified": 16383
+    }
+   ],
+   "convexity_loss": {
+    "length": 357000,
+    "certified": 129
+   },
+   "convexity_accuracy": {
+    "length": 365256,
+    "certified": 5643
+   },
+   "hybrid": {
+    "length": 1974196,
+    "certified": 16383
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.07501079210055249,
+     "Q_exact": 0.09919532909831653,
+     "cost_of_finishing": 1.9842854670463663
+    },
+    "cubic": {
+     "Q": 0.30691107868375544,
+     "Q_exact": 0.4058635377845877,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "cubic_knob": {
+     "Q": 0.34724602696379836,
+     "Q_exact": 0.45920304209803386,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "convexity_loss": {
+     "Q": 0.004074981298640418,
+     "Q_exact": 0.005388812725057789,
+     "cost_of_finishing": 0.9990896016322436
+    },
+    "convexity_accuracy": {
+     "Q": 0.17739472841484977,
+     "Q_exact": 0.2345892900561424,
+     "cost_of_finishing": 1.5047370368694377
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.3785926155578354,
+     "Q_exact": 0.5006562128301443,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "hybrid": {
+     "Q": 0.3303203661772053,
+     "Q_exact": 0.43682030962825896,
+     "cost_of_finishing": 20.44282533243913
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.393938751654988,
+     "Q_exact": 0.5209501595798867,
+     "cost_of_finishing": 20.44282533243913
+    }
+   },
+   "cost_v3": {
+    "B": 40407555,
+    "symmetry": 20372796,
+    "cubic": 2446083,
+    "cubic_knob": [
+     320909,
+     367255,
+     512683,
+     973819,
+     2446083
+    ]
+   }
+  },
+  "max2-v128-s1": {
+   "setting": "v128",
+   "V": 128,
+   "E": 4352,
+   "B": 40358144,
+   "real_correct": 16383,
+   "n_inputs": 16384,
+   "brute_force": {
+    "length": 40358144,
+    "certified": 16383
+   },
+   "symmetry": {
+    "length": 20338880,
+    "certified": 16383
+   },
+   "cubic": {
+    "length": 2444929,
+    "certified": 16383
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 320511,
+     "certified": 163
+    },
+    {
+     "knob": 0.25,
+     "length": 366845,
+     "certified": 519
+    },
+    {
+     "knob": 0.5,
+     "length": 512249,
+     "certified": 1643
+    },
+    {
+     "knob": 0.75,
+     "length": 973289,
+     "certified": 5197
+    },
+    {
+     "knob": 1.0,
+     "length": 2444929,
+     "certified": 16383
+    }
+   ],
+   "convexity_loss": {
+    "length": 357000,
+    "certified": 129
+   },
+   "convexity_accuracy": {
+    "length": 365256,
+    "certified": 5809
+   },
+   "hybrid": {
+    "length": 1941018,
+    "certified": 16383
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.07501079210055249,
+     "Q_exact": 0.09919532909831653,
+     "cost_of_finishing": 1.9842854670463663
+    },
+    "cubic": {
+     "Q": 0.30691107868375544,
+     "Q_exact": 0.4058635377845877,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "cubic_knob": {
+     "Q": 0.34724602696379836,
+     "Q_exact": 0.45920304209803386,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "convexity_loss": {
+     "Q": 0.004074981298640418,
+     "Q_exact": 0.005388812725057789,
+     "cost_of_finishing": 0.9990896016322436
+    },
+    "convexity_accuracy": {
+     "Q": 0.18261314502248133,
+     "Q_exact": 0.2414901977558269,
+     "cost_of_finishing": 1.5280330448082706
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.3807012696640018,
+     "Q_exact": 0.5034447267513851,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "hybrid": {
+     "Q": 0.33217562355361313,
+     "Q_exact": 0.43927372814126653,
+     "cost_of_finishing": 20.79225643451014
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.39700764196784577,
+     "Q_exact": 0.5250085033998331,
+     "cost_of_finishing": 20.79225643451014
+    }
+   },
+   "cost_v3": {
+    "B": 40407555,
+    "symmetry": 20372796,
+    "cubic": 2446083,
+    "cubic_knob": [
+     320909,
+     367255,
+     512683,
+     973819,
+     2446083
+    ]
+   }
+  },
+  "max2-v128-s5": {
+   "setting": "v128",
+   "V": 128,
+   "E": 4352,
+   "B": 40358144,
+   "real_correct": 16383,
+   "n_inputs": 16384,
+   "brute_force": {
+    "length": 40358144,
+    "certified": 16383
+   },
+   "symmetry": {
+    "length": 20338880,
+    "certified": 16383
+   },
+   "cubic": {
+    "length": 2444929,
+    "certified": 16383
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 320511,
+     "certified": 163
+    },
+    {
+     "knob": 0.25,
+     "length": 366845,
+     "certified": 519
+    },
+    {
+     "knob": 0.5,
+     "length": 512249,
+     "certified": 1643
+    },
+    {
+     "knob": 0.75,
+     "length": 973289,
+     "certified": 5197
+    },
+    {
+     "knob": 1.0,
+     "length": 2444929,
+     "certified": 16383
+    }
+   ],
+   "convexity_loss": {
+    "length": 357000,
+    "certified": 129
+   },
+   "convexity_accuracy": {
+    "length": 365256,
+    "certified": 6243
+   },
+   "hybrid": {
+    "length": 1900097,
+    "certified": 16383
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.07501079210055249,
+     "Q_exact": 0.09919532909831653,
+     "cost_of_finishing": 1.9842854670463663
+    },
+    "cubic": {
+     "Q": 0.30691107868375544,
+     "Q_exact": 0.4058635377845877,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "cubic_knob": {
+     "Q": 0.34724602696379836,
+     "Q_exact": 0.45920304209803386,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "convexity_loss": {
+     "Q": 0.004074981298640418,
+     "Q_exact": 0.005388812725057789,
+     "cost_of_finishing": 0.9990896016322436
+    },
+    "convexity_accuracy": {
+     "Q": 0.19625647518942177,
+     "Q_exact": 0.25953232993452013,
+     "cost_of_finishing": 1.592491463868253
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.38621425690542494,
+     "Q_exact": 0.5107351788105331,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "hybrid": {
+     "Q": 0.3345080310708119,
+     "Q_exact": 0.4423581367280972,
+     "cost_of_finishing": 21.24004406090847
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.40329495624039124,
+     "Q_exact": 0.5333229364426632,
+     "cost_of_finishing": 21.24004406090847
+    }
+   },
+   "cost_v3": {
+    "B": 40407555,
+    "symmetry": 20372796,
+    "cubic": 2446083,
+    "cubic_knob": [
+     320909,
+     367255,
+     512683,
+     973819,
+     2446083
+    ]
+   }
+  },
+  "max2-v128-s6": {
+   "setting": "v128",
+   "V": 128,
+   "E": 4352,
+   "B": 40358144,
+   "real_correct": 16383,
+   "n_inputs": 16384,
+   "brute_force": {
+    "length": 40358144,
+    "certified": 16383
+   },
+   "symmetry": {
+    "length": 20338880,
+    "certified": 16383
+   },
+   "cubic": {
+    "length": 2444929,
+    "certified": 16383
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 320511,
+     "certified": 163
+    },
+    {
+     "knob": 0.25,
+     "length": 366845,
+     "certified": 519
+    },
+    {
+     "knob": 0.5,
+     "length": 512249,
+     "certified": 1643
+    },
+    {
+     "knob": 0.75,
+     "length": 973289,
+     "certified": 5197
+    },
+    {
+     "knob": 1.0,
+     "length": 2444929,
+     "certified": 16383
+    }
+   ],
+   "convexity_loss": {
+    "length": 357000,
+    "certified": 126
+   },
+   "convexity_accuracy": {
+    "length": 365256,
+    "certified": 6061
+   },
+   "hybrid": {
+    "length": 1923641,
+    "certified": 16383
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.07501079210055249,
+     "Q_exact": 0.09919532909831653,
+     "cost_of_finishing": 1.9842854670463663
+    },
+    "cubic": {
+     "Q": 0.30691107868375544,
+     "Q_exact": 0.4058635377845877,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "cubic_knob": {
+     "Q": 0.34724602696379836,
+     "Q_exact": 0.45920304209803386,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "convexity_loss": {
+     "Q": 0.003980214291695292,
+     "Q_exact": 0.005263491498893654,
+     "cost_of_finishing": 0.9989068628395809
+    },
+    "convexity_accuracy": {
+     "Q": 0.1905350786678016,
+     "Q_exact": 0.25196627450474557,
+     "cost_of_finishing": 1.5648099297533276
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.3839023590299894,
+     "Q_exact": 0.5076778924631484,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "hybrid": {
+     "Q": 0.33316000999061257,
+     "Q_exact": 0.44057549464504087,
+     "cost_of_finishing": 20.980081002640304
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.4004403233191538,
+     "Q_exact": 0.5295479296183457,
+     "cost_of_finishing": 20.980081002640304
+    }
+   },
+   "cost_v3": {
+    "B": 40407555,
+    "symmetry": 20372796,
+    "cubic": 2446083,
+    "cubic_knob": [
+     320909,
+     367255,
+     512683,
+     973819,
+     2446083
+    ]
+   }
+  },
+  "max2-v128-s7": {
+   "setting": "v128",
+   "V": 128,
+   "E": 4352,
+   "B": 40358144,
+   "real_correct": 16383,
+   "n_inputs": 16384,
+   "brute_force": {
+    "length": 40358144,
+    "certified": 16383
+   },
+   "symmetry": {
+    "length": 20338880,
+    "certified": 16383
+   },
+   "cubic": {
+    "length": 2444929,
+    "certified": 16383
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 320511,
+     "certified": 163
+    },
+    {
+     "knob": 0.25,
+     "length": 366845,
+     "certified": 519
+    },
+    {
+     "knob": 0.5,
+     "length": 512249,
+     "certified": 1643
+    },
+    {
+     "knob": 0.75,
+     "length": 973289,
+     "certified": 5197
+    },
+    {
+     "knob": 1.0,
+     "length": 2444929,
+     "certified": 16383
+    }
+   ],
+   "convexity_loss": {
+    "length": 357000,
+    "certified": 129
+   },
+   "convexity_accuracy": {
+    "length": 365256,
+    "certified": 6203
+   },
+   "hybrid": {
+    "length": 1895315,
+    "certified": 16383
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.07501079210055249,
+     "Q_exact": 0.09919532909831653,
+     "cost_of_finishing": 1.9842854670463663
+    },
+    "cubic": {
+     "Q": 0.30691107868375544,
+     "Q_exact": 0.4058635377845877,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "cubic_knob": {
+     "Q": 0.34724602696379836,
+     "Q_exact": 0.45920304209803386,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "convexity_loss": {
+     "Q": 0.004074981298640418,
+     "Q_exact": 0.005388812725057789,
+     "cost_of_finishing": 0.9990896016322436
+    },
+    "convexity_accuracy": {
+     "Q": 0.1949990254044503,
+     "Q_exact": 0.25786946060929494,
+     "cost_of_finishing": 1.5863239653970023
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.38570614748225235,
+     "Q_exact": 0.5100632477451738,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "hybrid": {
+     "Q": 0.3347838664369714,
+     "Q_exact": 0.44272290530548364,
+     "cost_of_finishing": 21.293634039724267
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.40302562372761264,
+     "Q_exact": 0.5329667673302755,
+     "cost_of_finishing": 21.293634039724267
+    }
+   },
+   "cost_v3": {
+    "B": 40407555,
+    "symmetry": 20372796,
+    "cubic": 2446083,
+    "cubic_knob": [
+     320909,
+     367255,
+     512683,
+     973819,
+     2446083
+    ]
+   }
+  },
+  "max2-v128-s8": {
+   "setting": "v128",
+   "V": 128,
+   "E": 4352,
+   "B": 40358144,
+   "real_correct": 16383,
+   "n_inputs": 16384,
+   "brute_force": {
+    "length": 40358144,
+    "certified": 16383
+   },
+   "symmetry": {
+    "length": 20338880,
+    "certified": 16383
+   },
+   "cubic": {
+    "length": 2444929,
+    "certified": 16383
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 320511,
+     "certified": 163
+    },
+    {
+     "knob": 0.25,
+     "length": 366845,
+     "certified": 519
+    },
+    {
+     "knob": 0.5,
+     "length": 512249,
+     "certified": 1643
+    },
+    {
+     "knob": 0.75,
+     "length": 973289,
+     "certified": 5197
+    },
+    {
+     "knob": 1.0,
+     "length": 2444929,
+     "certified": 16383
+    }
+   ],
+   "convexity_loss": {
+    "length": 357000,
+    "certified": 129
+   },
+   "convexity_accuracy": {
+    "length": 365256,
+    "certified": 5881
+   },
+   "hybrid": {
+    "length": 1927251,
+    "certified": 16383
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.07501079210055249,
+     "Q_exact": 0.09919532909831653,
+     "cost_of_finishing": 1.9842854670463663
+    },
+    "cubic": {
+     "Q": 0.30691107868375544,
+     "Q_exact": 0.4058635377845877,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "cubic_knob": {
+     "Q": 0.34724602696379836,
+     "Q_exact": 0.45920304209803386,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "convexity_loss": {
+     "Q": 0.004074981298640418,
+     "Q_exact": 0.005388812725057789,
+     "cost_of_finishing": 0.9990896016322436
+    },
+    "convexity_accuracy": {
+     "Q": 0.18487655463542998,
+     "Q_exact": 0.24448336254123224,
+     "cost_of_finishing": 1.5383631362948729
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.3816158666257126,
+     "Q_exact": 0.5046542026690318,
+     "cost_of_finishing": 16.506877704833148
+    },
+    "hybrid": {
+     "Q": 0.3329547779971941,
+     "Q_exact": 0.4403040929632487,
+     "cost_of_finishing": 20.940782492783764
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.39831066795573344,
+     "Q_exact": 0.5267316433384023,
+     "cost_of_finishing": 20.940782492783764
+    }
+   },
+   "cost_v3": {
+    "B": 40407555,
+    "symmetry": 20372796,
+    "cubic": 2446083,
+    "cubic_knob": [
+     320909,
+     367255,
+     512683,
+     973819,
+     2446083
+    ]
+   }
+  },
+  "max2-v64-s0": {
+   "setting": "v64",
+   "V": 64,
+   "E": 1088,
+   "B": 2683968,
+   "real_correct": 4095,
+   "n_inputs": 4096,
+   "brute_force": {
+    "length": 2683968,
+    "certified": 4095
+   },
+   "symmetry": {
+    "length": 1363488,
+    "certified": 4095
+   },
+   "cubic": {
+    "length": 312065,
+    "certified": 4095
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 40639,
+     "certified": 39
+    },
+    {
+     "knob": 0.25,
+     "length": 46462,
+     "certified": 128
+    },
+    {
+     "knob": 0.5,
+     "length": 65084,
+     "certified": 412
+    },
+    {
+     "knob": 0.75,
+     "length": 123572,
+     "certified": 1302
+    },
+    {
+     "knob": 1.0,
+     "length": 312065,
+     "certified": 4095
+    }
+   ],
+   "convexity_loss": {
+    "length": 52584,
+    "certified": 62
+   },
+   "convexity_accuracy": {
+    "length": 54664,
+    "certified": 1595
+   },
+   "hybrid": {
+    "length": 242788,
+    "certified": 4095
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.0866867151445544,
+     "Q_exact": 0.09801806846419084,
+     "cost_of_finishing": 1.968457368161656
+    },
+    "cubic": {
+     "Q": 0.2754313765149641,
+     "Q_exact": 0.31143470456125627,
+     "cost_of_finishing": 8.600669732267317
+    },
+    "cubic_knob": {
+     "Q": 0.32290076168377324,
+     "Q_exact": 0.3651091048159032,
+     "cost_of_finishing": 8.600669732267317
+    },
+    "convexity_loss": {
+     "Q": 0.007621235149596532,
+     "Q_exact": 0.008617453636686543,
+     "cost_of_finishing": 0.9958066299438884
+    },
+    "convexity_accuracy": {
+     "Q": 0.19412836550910878,
+     "Q_exact": 0.2195040772923857,
+     "cost_of_finishing": 1.5854935651505364
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.3622793890225179,
+     "Q_exact": 0.4096351545581099,
+     "cost_of_finishing": 8.600669732267317
+    },
+    "hybrid": {
+     "Q": 0.30756181872479216,
+     "Q_exact": 0.347765114348453,
+     "cost_of_finishing": 11.054780302156614
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.3818950436072725,
+     "Q_exact": 0.4318148919129308,
+     "cost_of_finishing": 11.054780302156614
+    }
+   },
+   "cost_v3": {
+    "B": 2696387,
+    "symmetry": 1372252,
+    "cubic": 312643,
+    "cubic_knob": [
+     40845,
+     46674,
+     65308,
+     123844,
+     312643
+    ]
+   }
+  },
+  "max2-v64-s1": {
+   "setting": "v64",
+   "V": 64,
+   "E": 1088,
+   "B": 2683968,
+   "real_correct": 4092,
+   "n_inputs": 4096,
+   "brute_force": {
+    "length": 2683968,
+    "certified": 4092
+   },
+   "symmetry": {
+    "length": 1363488,
+    "certified": 4092
+   },
+   "cubic": {
+    "length": 311682,
+    "certified": 4092
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 40639,
+     "certified": 39
+    },
+    {
+     "knob": 0.25,
+     "length": 46462,
+     "certified": 128
+    },
+    {
+     "knob": 0.5,
+     "length": 65084,
+     "certified": 412
+    },
+    {
+     "knob": 0.75,
+     "length": 123572,
+     "certified": 1302
+    },
+    {
+     "knob": 1.0,
+     "length": 311682,
+     "certified": 4092
+    }
+   ],
+   "convexity_loss": {
+    "length": 52584,
+    "certified": 62
+   },
+   "convexity_accuracy": {
+    "length": 54664,
+    "certified": 1634
+   },
+   "hybrid": {
+    "length": 242113,
+    "certified": 4092
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.08662320839353274,
+     "Q_exact": 0.09794626035542586,
+     "cost_of_finishing": 1.968457368161656
+    },
+    "cubic": {
+     "Q": 0.2753866697174368,
+     "Q_exact": 0.3113841538634528,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "cubic_knob": {
+     "Q": 0.32280607665829947,
+     "Q_exact": 0.36500204292880845,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "convexity_loss": {
+     "Q": 0.007621235149596532,
+     "Q_exact": 0.008617453636686543,
+     "cost_of_finishing": 0.9965334521743346
+    },
+    "convexity_accuracy": {
+     "Q": 0.19887507789459796,
+     "Q_exact": 0.2248712616274346,
+     "cost_of_finishing": 1.6116957120197495
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.3642955163514552,
+     "Q_exact": 0.41191482228148324,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "hybrid": {
+     "Q": 0.3076925939025197,
+     "Q_exact": 0.3479129839534154,
+     "cost_of_finishing": 11.085600525374515
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.38370117657797853,
+     "Q_exact": 0.4338571156248674,
+     "cost_of_finishing": 11.085600525374515
+    }
+   },
+   "cost_v3": {
+    "B": 2696387,
+    "symmetry": 1372250,
+    "cubic": 312264,
+    "cubic_knob": [
+     40845,
+     46674,
+     65308,
+     123844,
+     312264
+    ]
+   }
+  },
+  "max2-v64-s3": {
+   "setting": "v64",
+   "V": 64,
+   "E": 1088,
+   "B": 2683968,
+   "real_correct": 4092,
+   "n_inputs": 4096,
+   "brute_force": {
+    "length": 2683968,
+    "certified": 4092
+   },
+   "symmetry": {
+    "length": 1363488,
+    "certified": 4092
+   },
+   "cubic": {
+    "length": 311682,
+    "certified": 4092
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 40639,
+     "certified": 39
+    },
+    {
+     "knob": 0.25,
+     "length": 46462,
+     "certified": 128
+    },
+    {
+     "knob": 0.5,
+     "length": 65084,
+     "certified": 412
+    },
+    {
+     "knob": 0.75,
+     "length": 123572,
+     "certified": 1302
+    },
+    {
+     "knob": 1.0,
+     "length": 311682,
+     "certified": 4092
+    }
+   ],
+   "convexity_loss": {
+    "length": 52584,
+    "certified": 62
+   },
+   "convexity_accuracy": {
+    "length": 54664,
+    "certified": 1586
+   },
+   "hybrid": {
+    "length": 245753,
+    "certified": 4092
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.08662320839353274,
+     "Q_exact": 0.09794626035542586,
+     "cost_of_finishing": 1.968457368161656
+    },
+    "cubic": {
+     "Q": 0.2753866697174368,
+     "Q_exact": 0.3113841538634528,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "cubic_knob": {
+     "Q": 0.32280607665829947,
+     "Q_exact": 0.36500204292880845,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "convexity_loss": {
+     "Q": 0.007621235149596532,
+     "Q_exact": 0.008617453636686543,
+     "cost_of_finishing": 0.9965334521743346
+    },
+    "convexity_accuracy": {
+     "Q": 0.19303297034322667,
+     "Q_exact": 0.21826549629198977,
+     "cost_of_finishing": 1.5818197881553975
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.3616837509668573,
+     "Q_exact": 0.4089616569913575,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "hybrid": {
+     "Q": 0.30578395388381924,
+     "Q_exact": 0.34575485386722504,
+     "cost_of_finishing": 10.921404825169988
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.38029948755555587,
+     "Q_exact": 0.43001077092328643,
+     "cost_of_finishing": 10.921404825169988
+    }
+   },
+   "cost_v3": {
+    "B": 2696387,
+    "symmetry": 1372250,
+    "cubic": 312264,
+    "cubic_knob": [
+     40845,
+     46674,
+     65308,
+     123844,
+     312264
+    ]
+   }
+  },
+  "max2-v64-s4": {
+   "setting": "v64",
+   "V": 64,
+   "E": 1088,
+   "B": 2683968,
+   "real_correct": 4092,
+   "n_inputs": 4096,
+   "brute_force": {
+    "length": 2683968,
+    "certified": 4092
+   },
+   "symmetry": {
+    "length": 1363488,
+    "certified": 4092
+   },
+   "cubic": {
+    "length": 311682,
+    "certified": 4092
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 40639,
+     "certified": 39
+    },
+    {
+     "knob": 0.25,
+     "length": 46462,
+     "certified": 128
+    },
+    {
+     "knob": 0.5,
+     "length": 65084,
+     "certified": 412
+    },
+    {
+     "knob": 0.75,
+     "length": 123572,
+     "certified": 1302
+    },
+    {
+     "knob": 1.0,
+     "length": 311682,
+     "certified": 4092
+    }
+   ],
+   "convexity_loss": {
+    "length": 52584,
+    "certified": 62
+   },
+   "convexity_accuracy": {
+    "length": 54664,
+    "certified": 1594
+   },
+   "hybrid": {
+    "length": 242782,
+    "certified": 4092
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.08662320839353274,
+     "Q_exact": 0.09794626035542586,
+     "cost_of_finishing": 1.968457368161656
+    },
+    "cubic": {
+     "Q": 0.2753866697174368,
+     "Q_exact": 0.3113841538634528,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "cubic_knob": {
+     "Q": 0.32280607665829947,
+     "Q_exact": 0.36500204292880845,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "convexity_loss": {
+     "Q": 0.007621235149596532,
+     "Q_exact": 0.008617453636686543,
+     "cost_of_finishing": 0.9965334521743346
+    },
+    "convexity_accuracy": {
+     "Q": 0.19400665493512187,
+     "Q_exact": 0.21936645718123057,
+     "cost_of_finishing": 1.5867219525750924
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.36211904519762356,
+     "Q_exact": 0.4094538512063784,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "hybrid": {
+     "Q": 0.30733965963860577,
+     "Q_exact": 0.34751391548270466,
+     "cost_of_finishing": 11.055053504790306
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.3816250493088358,
+     "Q_exact": 0.43150960500034014,
+     "cost_of_finishing": 11.055053504790306
+    }
+   },
+   "cost_v3": {
+    "B": 2696387,
+    "symmetry": 1372250,
+    "cubic": 312264,
+    "cubic_knob": [
+     40845,
+     46674,
+     65308,
+     123844,
+     312264
+    ]
+   }
+  },
+  "max2-v64-s5": {
+   "setting": "v64",
+   "V": 64,
+   "E": 1088,
+   "B": 2683968,
+   "real_correct": 4095,
+   "n_inputs": 4096,
+   "brute_force": {
+    "length": 2683968,
+    "certified": 4095
+   },
+   "symmetry": {
+    "length": 1363488,
+    "certified": 4095
+   },
+   "cubic": {
+    "length": 312065,
+    "certified": 4095
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 40639,
+     "certified": 39
+    },
+    {
+     "knob": 0.25,
+     "length": 46462,
+     "certified": 128
+    },
+    {
+     "knob": 0.5,
+     "length": 65084,
+     "certified": 412
+    },
+    {
+     "knob": 0.75,
+     "length": 123572,
+     "certified": 1302
+    },
+    {
+     "knob": 1.0,
+     "length": 312065,
+     "certified": 4095
+    }
+   ],
+   "convexity_loss": {
+    "length": 52584,
+    "certified": 62
+   },
+   "convexity_accuracy": {
+    "length": 54664,
+    "certified": 1745
+   },
+   "hybrid": {
+    "length": 233943,
+    "certified": 4095
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.0866867151445544,
+     "Q_exact": 0.09801806846419084,
+     "cost_of_finishing": 1.968457368161656
+    },
+    "cubic": {
+     "Q": 0.2754313765149641,
+     "Q_exact": 0.31143470456125627,
+     "cost_of_finishing": 8.600669732267317
+    },
+    "cubic_knob": {
+     "Q": 0.32290076168377324,
+     "Q_exact": 0.3651091048159032,
+     "cost_of_finishing": 8.600669732267317
+    },
+    "convexity_loss": {
+     "Q": 0.007621235149596532,
+     "Q_exact": 0.008617453636686543,
+     "cost_of_finishing": 0.9958066299438884
+    },
+    "convexity_accuracy": {
+     "Q": 0.2123849516071441,
+     "Q_exact": 0.2401470939656508,
+     "cost_of_finishing": 1.6832258822269135
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.37044691370974864,
+     "Q_exact": 0.41887030659543156,
+     "cost_of_finishing": 8.600669732267317
+    },
+    "hybrid": {
+     "Q": 0.3123119728418476,
+     "Q_exact": 0.35313619030495436,
+     "cost_of_finishing": 11.472743360562188
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.3916116026885462,
+     "Q_exact": 0.4428015621504231,
+     "cost_of_finishing": 11.472743360562188
+    }
+   },
+   "cost_v3": {
+    "B": 2696387,
+    "symmetry": 1372252,
+    "cubic": 312643,
+    "cubic_knob": [
+     40845,
+     46674,
+     65308,
+     123844,
+     312643
+    ]
+   }
+  },
+  "max2-v64-s8": {
+   "setting": "v64",
+   "V": 64,
+   "E": 1088,
+   "B": 2683968,
+   "real_correct": 4092,
+   "n_inputs": 4096,
+   "brute_force": {
+    "length": 2683968,
+    "certified": 4092
+   },
+   "symmetry": {
+    "length": 1363488,
+    "certified": 4092
+   },
+   "cubic": {
+    "length": 311682,
+    "certified": 4092
+   },
+   "cubic_knob": [
+    {
+     "knob": 0.0,
+     "length": 40639,
+     "certified": 39
+    },
+    {
+     "knob": 0.25,
+     "length": 46462,
+     "certified": 128
+    },
+    {
+     "knob": 0.5,
+     "length": 65084,
+     "certified": 412
+    },
+    {
+     "knob": 0.75,
+     "length": 123572,
+     "certified": 1302
+    },
+    {
+     "knob": 1.0,
+     "length": 311682,
+     "certified": 4092
+    }
+   ],
+   "convexity_loss": {
+    "length": 52584,
+    "certified": 62
+   },
+   "convexity_accuracy": {
+    "length": 54664,
+    "certified": 1700
+   },
+   "hybrid": {
+    "length": 235502,
+    "certified": 4092
+   },
+   "scores": {
+    "brute_force": {
+     "Q": 0.0,
+     "Q_exact": 0.0,
+     "cost_of_finishing": 1.0
+    },
+    "symmetry": {
+     "Q": 0.08662320839353274,
+     "Q_exact": 0.09794626035542586,
+     "cost_of_finishing": 1.968457368161656
+    },
+    "cubic": {
+     "Q": 0.2753866697174368,
+     "Q_exact": 0.3113841538634528,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "cubic_knob": {
+     "Q": 0.32280607665829947,
+     "Q_exact": 0.36500204292880845,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "convexity_loss": {
+     "Q": 0.007621235149596532,
+     "Q_exact": 0.008617453636686543,
+     "cost_of_finishing": 0.9965334521743346
+    },
+    "convexity_accuracy": {
+     "Q": 0.2069079757777335,
+     "Q_exact": 0.23395418896367126,
+     "cost_of_finishing": 1.6546669261105191
+    },
+    "convexity_accuracy+cubic": {
+     "Q": 0.3678866937552772,
+     "Q_exact": 0.41597542455540615,
+     "cost_of_finishing": 8.611238377577147
+    },
+    "hybrid": {
+     "Q": 0.3112336440167347,
+     "Q_exact": 0.35191690649162066,
+     "cost_of_finishing": 11.396794931677862
+    },
+    "convexity_accuracy+hybrid": {
+     "Q": 0.38884123005144555,
+     "Q_exact": 0.4396690570790077,
+     "cost_of_finishing": 11.396794931677862
+    }
+   },
+   "cost_v3": {
+    "B": 2696387,
+    "symmetry": 1372250,
+    "cubic": 312264,
+    "cubic_knob": [
+     40845,
+     46674,
+     65308,
+     123844,
+     312264
+    ]
+   }
+  }
+ }
+}

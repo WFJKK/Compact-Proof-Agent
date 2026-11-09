@@ -1,6 +1,6 @@
 # Results
 
-One line per run. Raw run data stays outside the repository. Write-ups that discuss several runs: [max2, 13 October 2026](max2-2026-10-13/README.md).
+One line per run. Raw run data stays outside the repository. Write-ups that discuss several runs: [max2, 13 October 2026](max2-2026-10-13/README.md). The numbers are as each run measured them (cost-v3, or cost-v2 before 16 October); the results kept here, measured again under cost-v4: [9 November 2026](cost-v4-2026-11-09/README.md).
 
 | Run | Model | Commit | Backend | Development (median Q) |
 | --- | --- | --- | --- | --- |

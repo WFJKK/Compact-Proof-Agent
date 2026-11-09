@@ -1,0 +1,279 @@
+{
+ "cost_model": "cost-v4",
+ "source": "results/gross-cubic-2026-10-16/all_proofs_attn-max4_v24.json",
+ "note": "the proofs' lengths are unchanged (counted by walking their loops, with no plan); only B, the last frontier point and the scores move",
+ "networks": {
+  "attn-max4-v24-s0": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.6093637750389109,
+    "Q_exact": 0.9762484613071786,
+    "Q_grid": 0.5824695609466374,
+    "cost_of_finishing": 87.888164978286,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 22,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 4138,
+      "n_inputs": 331776
+     },
+     {
+      "length": 106497,
+      "certified": 4786,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 238545,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 328456,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331760,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.6094067996080051,
+    "Q_grid": 0.5824695609466374,
+    "cost_of_finishing": 87.90458304037685
+   }
+  },
+  "attn-max4-v24-s2": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.6194031539740724,
+    "Q_exact": 0.9863602309991278,
+    "Q_grid": 0.5916222168920565,
+    "cost_of_finishing": 419.9806460287369,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 22,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 96393,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 247094,
+      "n_inputs": 331776
+     },
+     {
+      "length": 122826,
+      "certified": 247822,
+      "n_inputs": 331776
+     },
+     {
+      "length": 129519,
+      "certified": 248822,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 331441,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331760,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.619446060721404,
+    "Q_grid": 0.5916222168920565,
+    "cost_of_finishing": 420.3558144838608
+   }
+  },
+  "attn-max4-v24-s3": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.6161853831123816,
+    "Q_exact": 0.9819645020059447,
+    "Q_grid": 0.588768198708577,
+    "cost_of_finishing": 148.2480226324032,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 22,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 42560,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 247169,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 329993,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331760,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.6162281602512187,
+    "Q_grid": 0.588768198708577,
+    "cost_of_finishing": 148.29474175091508
+   }
+  },
+  "attn-max4-v24-s5": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.6141432446045881,
+    "Q_exact": 0.9803125449653457,
+    "Q_grid": 0.5867593925134016,
+    "cost_of_finishing": 124.86962355488134,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 22,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 54802,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 244205,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 329574,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331760,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.6141861098248583,
+    "Q_grid": 0.5867593925134016,
+    "cost_of_finishing": 124.90276785429128
+   }
+  },
+  "attn-max4-v24-s7": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.6052025000026697,
+    "Q_exact": 0.9732655213760876,
+    "Q_grid": 0.5782544468810916,
+    "cost_of_finishing": 74.52325822237329,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 21,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 52948,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 231722,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 327778,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331759,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.6052457639497498,
+    "Q_grid": 0.5782544468810916,
+    "cost_of_finishing": 74.5350623101914
+   }
+  },
+  "attn-max4-v24-s8": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.6169516157684907,
+    "Q_exact": 0.9790797062603462,
+    "Q_grid": 0.5896605255543372,
+    "cost_of_finishing": 93.24843562804519,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 22,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 37514,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 241403,
+      "n_inputs": 331776
+     },
+     {
+      "length": 113924,
+      "certified": 253004,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 328673,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331760,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.6169938565750761,
+    "Q_grid": 0.5896605255543372,
+    "cost_of_finishing": 93.26691763619058
+   }
+  }
+ }
+}

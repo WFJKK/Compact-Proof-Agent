@@ -1,0 +1,289 @@
+{
+ "cost_model": "cost-v4",
+ "source": "results/gross-cubic-2026-10-16/all_proofs_attn-min4_v24.json",
+ "note": "the proofs' lengths are unchanged (counted by walking their loops, with no plan); only B, the last frontier point and the scores move",
+ "networks": {
+  "attn-min4-v24-s0": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.6169088142003585,
+    "Q_exact": 0.9857450803461281,
+    "Q_grid": 0.5896548146625243,
+    "cost_of_finishing": 423.73536173075973,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 22,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 50830,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 241526,
+      "n_inputs": 331776
+     },
+     {
+      "length": 149820,
+      "certified": 244667,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 331448,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331760,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.6169520052810338,
+    "Q_grid": 0.5896548146625243,
+    "cost_of_finishing": 424.1172713926502
+   }
+  },
+  "attn-min4-v24-s2": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.6186383229814196,
+    "Q_exact": 0.9819948561189425,
+    "Q_grid": 0.5908298306530215,
+    "cost_of_finishing": 132.65843715499722,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 21,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 107217,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 250456,
+      "n_inputs": 331776
+     },
+     {
+      "length": 113924,
+      "certified": 250592,
+      "n_inputs": 331776
+     },
+     {
+      "length": 129519,
+      "certified": 252290,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 329730,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331760,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.6186807332479636,
+    "Q_grid": 0.5908298306530215,
+    "cost_of_finishing": 132.69584581761688
+   }
+  },
+  "attn-min4-v24-s3": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.616435909129526,
+    "Q_exact": 0.9814038590886323,
+    "Q_grid": 0.5889376218323586,
+    "cost_of_finishing": 136.59070929585678,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 22,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 55191,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 248293,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 329737,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331695,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.6164785707314777,
+    "Q_grid": 0.5889376218323586,
+    "cost_of_finishing": 136.63036890043284
+   }
+  },
+  "attn-min4-v24-s5": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.6167801767516946,
+    "Q_exact": 0.9812636793958246,
+    "Q_grid": 0.5893987763462475,
+    "cost_of_finishing": 127.31336932785807,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 22,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 26121,
+      "n_inputs": 331776
+     },
+     {
+      "length": 105608,
+      "certified": 31115,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 249622,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 329617,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331752,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.6168227585555311,
+    "Q_grid": 0.5893987763462475,
+    "cost_of_finishing": 127.34782379345867
+   }
+  },
+  "attn-min4-v24-s7": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.6196031841118504,
+    "Q_exact": 0.9840888652350503,
+    "Q_grid": 0.5919634426778753,
+    "cost_of_finishing": 193.34499414839925,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 2327,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 81243,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 241401,
+      "n_inputs": 331776
+     },
+     {
+      "length": 113924,
+      "certified": 252512,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 330450,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331695,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.6196457306173349,
+    "Q_grid": 0.5919634426778753,
+    "cost_of_finishing": 193.42446801114835
+   }
+  },
+  "attn-min4-v24-s8": {
+   "B": 683127984,
+   "B_cost_v3": 684152163,
+   "scores": {
+    "Q": 0.6127060737166898,
+    "Q_exact": 0.9826967778077567,
+    "Q_grid": 0.5852212589851365,
+    "cost_of_finishing": 227.40282132630418,
+    "frontier": [
+     {
+      "length": 104524,
+      "certified": 10865,
+      "n_inputs": 331776
+     },
+     {
+      "length": 104672,
+      "certified": 107354,
+      "n_inputs": 331776
+     },
+     {
+      "length": 107231,
+      "certified": 236099,
+      "n_inputs": 331776
+     },
+     {
+      "length": 149820,
+      "certified": 237379,
+      "n_inputs": 331776
+     },
+     {
+      "length": 969748,
+      "certified": 330772,
+      "n_inputs": 331776
+     },
+     {
+      "length": 683127984,
+      "certified": 331760,
+      "n_inputs": 331776
+     }
+    ]
+   },
+   "scores_cost_v3": {
+    "Q": 0.6127495095438059,
+    "Q_grid": 0.5852212589851365,
+    "cost_of_finishing": 227.51276787502113
+   }
+  }
+ }
+}

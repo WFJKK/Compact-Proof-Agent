@@ -1,0 +1,522 @@
+{
+ "cost_model": "cost-v4",
+ "source": "results/attn-tiny-reference-2026-10-23/results.json",
+ "networks": {
+  "attn_max2_tiny-v8d4-s1": {
+   "model": "tests/attn_max2_tiny",
+   "setting": "v8d4",
+   "n_inputs": 64,
+   "E": 136,
+   "B": 12360,
+   "real_correct": 64,
+   "brute_force": {
+    "legacy_length": 12360,
+    "legacy_by_rule": {
+     "extract": 136,
+     "single": 12224
+    },
+    "certified": 64,
+    "single_per_input": 191.0,
+    "open_lane_length": 12360,
+    "legacy_length_cost_v3": 12571
+   },
+   "peeling": {
+    "points": [
+     {
+      "knob": 0.05,
+      "length": 1497,
+      "certified": 8,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 1099,
+       "token_convex": 262
+      },
+      "length_cost_v3": 1664
+     },
+     {
+      "knob": 0.1,
+      "length": 1497,
+      "certified": 8,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 1099,
+       "token_convex": 262
+      },
+      "length_cost_v3": 1664
+     },
+     {
+      "knob": 0.2,
+      "length": 1998,
+      "certified": 15,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 1354,
+       "token_convex": 508
+      },
+      "length_cost_v3": 2165
+     },
+     {
+      "knob": 0.35,
+      "length": 2916,
+      "certified": 26,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 1828,
+       "token_convex": 952
+      },
+      "length_cost_v3": 3083
+     },
+     {
+      "knob": 0.5,
+      "length": 3756,
+      "certified": 33,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 2254,
+       "token_convex": 1366
+      },
+      "length_cost_v3": 3923
+     },
+     {
+      "knob": 0.75,
+      "length": 5601,
+      "certified": 48,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 2711,
+       "token_convex": 2754
+      },
+      "length_cost_v3": 5768
+     },
+     {
+      "knob": 1.0,
+      "length": 7217,
+      "certified": 64,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 2823,
+       "token_convex": 4258
+      },
+      "length_cost_v3": 7384
+     }
+    ],
+    "full_length": 7217,
+    "full_certified": 64,
+    "boxes": 36,
+    "Q": 0.2576122001917871,
+    "Q_exact": 0.2576122001917871,
+    "Q_grid": 0.21354166666666666,
+    "cost_of_finishing": 1.7126229735347096,
+    "shortest_full": 7217,
+    "seconds": 0.2,
+    "full_length_cost_v3": 7384,
+    "Q_exact_cost_v3": 0.24957762459220215
+   },
+   "cubic": {
+    "length": 12436,
+    "certified": 64,
+    "Q": 0.0,
+    "Q_exact": 0.0,
+    "Q_grid": 0.0,
+    "cost_of_finishing": 1.0,
+    "shortest_full": 12360,
+    "Q_exact_cost_v3": 0.0023853084086233474
+   },
+   "B_cost_v3": 12571
+  },
+  "attn_min2_tiny-v8d4-s1": {
+   "model": "tests/attn_min2_tiny",
+   "setting": "v8d4",
+   "n_inputs": 64,
+   "E": 136,
+   "B": 12360,
+   "real_correct": 64,
+   "brute_force": {
+    "legacy_length": 12360,
+    "legacy_by_rule": {
+     "extract": 136,
+     "single": 12224
+    },
+    "certified": 64,
+    "single_per_input": 191.0,
+    "open_lane_length": 12360,
+    "legacy_length_cost_v3": 12571
+   },
+   "peeling": {
+    "points": [
+     {
+      "knob": 0.05,
+      "length": 1497,
+      "certified": 8,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 1099,
+       "token_convex": 262
+      },
+      "length_cost_v3": 1664
+     },
+     {
+      "knob": 0.1,
+      "length": 1497,
+      "certified": 8,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 1099,
+       "token_convex": 262
+      },
+      "length_cost_v3": 1664
+     },
+     {
+      "knob": 0.2,
+      "length": 1998,
+      "certified": 15,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 1354,
+       "token_convex": 508
+      },
+      "length_cost_v3": 2165
+     },
+     {
+      "knob": 0.35,
+      "length": 2916,
+      "certified": 26,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 1828,
+       "token_convex": 952
+      },
+      "length_cost_v3": 3083
+     },
+     {
+      "knob": 0.5,
+      "length": 3600,
+      "certified": 33,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 2254,
+       "token_convex": 1210
+      },
+      "length_cost_v3": 3767
+     },
+     {
+      "knob": 0.75,
+      "length": 5202,
+      "certified": 48,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 2540,
+       "token_convex": 2526
+      },
+      "length_cost_v3": 5369
+     },
+     {
+      "knob": 1.0,
+      "length": 6989,
+      "certified": 64,
+      "n_inputs": 64,
+      "length_by_rule": {
+       "extract": 136,
+       "tables": 2823,
+       "token_convex": 4030
+      },
+      "length_cost_v3": 7156
+     }
+    ],
+    "full_length": 6989,
+    "full_certified": 64,
+    "boxes": 36,
+    "Q": 0.2642616232722642,
+    "Q_exact": 0.2642616232722642,
+    "Q_grid": 0.21354166666666666,
+    "cost_of_finishing": 1.768493346687652,
+    "shortest_full": 6989,
+    "seconds": 0.2,
+    "full_length_cost_v3": 7156,
+    "Q_exact_cost_v3": 0.25600205673576487
+   },
+   "cubic": {
+    "length": 12436,
+    "certified": 64,
+    "Q": 0.0,
+    "Q_exact": 0.0,
+    "Q_grid": 0.0,
+    "cost_of_finishing": 1.0,
+    "shortest_full": 12360,
+    "Q_exact_cost_v3": 0.0023853084086233474
+   },
+   "B_cost_v3": 12571
+  },
+  "attn_max4_tiny-v4d4-s0": {
+   "model": "tests/attn_max4_tiny",
+   "setting": "v4d4",
+   "n_inputs": 256,
+   "E": 112,
+   "B": 73584,
+   "real_correct": 256,
+   "brute_force": {
+    "legacy_length": 73584,
+    "legacy_by_rule": {
+     "extract": 112,
+     "single": 73472
+    },
+    "certified": 256,
+    "single_per_input": 287.0,
+    "open_lane_length": 73584,
+    "legacy_length_cost_v3": 74523
+   },
+   "peeling": {
+    "points": [
+     {
+      "knob": 0.05,
+      "length": 1719,
+      "certified": 64,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1235,
+       "token_convex": 372
+      },
+      "length_cost_v3": 1824
+     },
+     {
+      "knob": 0.1,
+      "length": 1719,
+      "certified": 64,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1235,
+       "token_convex": 372
+      },
+      "length_cost_v3": 1824
+     },
+     {
+      "knob": 0.2,
+      "length": 1719,
+      "certified": 64,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1235,
+       "token_convex": 372
+      },
+      "length_cost_v3": 1824
+     },
+     {
+      "knob": 0.35,
+      "length": 2282,
+      "certified": 91,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1474,
+       "token_convex": 696
+      },
+      "length_cost_v3": 2387
+     },
+     {
+      "knob": 0.5,
+      "length": 3833,
+      "certified": 139,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1919,
+       "token_convex": 1802
+      },
+      "length_cost_v3": 3938
+     },
+     {
+      "knob": 0.75,
+      "length": 5221,
+      "certified": 193,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1973,
+       "token_convex": 3136
+      },
+      "length_cost_v3": 5326
+     },
+     {
+      "knob": 1.0,
+      "length": 7183,
+      "certified": 256,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1991,
+       "token_convex": 5080
+      },
+      "length_cost_v3": 7288
+     }
+    ],
+    "full_length": 7183,
+    "full_certified": 256,
+    "boxes": 22,
+    "Q": 0.4609039826844489,
+    "Q_exact": 0.4609039826844489,
+    "Q_grid": 0.4331597222222222,
+    "cost_of_finishing": 10.244187665320897,
+    "shortest_full": 7183,
+    "seconds": 0.2,
+    "full_length_cost_v3": 7288,
+    "Q_exact_cost_v3": 0.45697041745117506
+   },
+   "cubic": {
+    "length": 5486,
+    "certified": 256,
+    "Q": 0.40017796965527624,
+    "Q_exact": 0.40017796965527624,
+    "Q_grid": 0.3333333333333333,
+    "cost_of_finishing": 13.41305140357273,
+    "shortest_full": 5486,
+    "Q_exact_cost_v3": 0.4013480361514446
+   },
+   "B_cost_v3": 74523
+  },
+  "attn_min4_tiny-v4d4-s0": {
+   "model": "tests/attn_min4_tiny",
+   "setting": "v4d4",
+   "n_inputs": 256,
+   "E": 112,
+   "B": 73584,
+   "real_correct": 256,
+   "brute_force": {
+    "legacy_length": 73584,
+    "legacy_by_rule": {
+     "extract": 112,
+     "single": 73472
+    },
+    "certified": 256,
+    "single_per_input": 287.0,
+    "open_lane_length": 73584,
+    "legacy_length_cost_v3": 74523
+   },
+   "peeling": {
+    "points": [
+     {
+      "knob": 0.05,
+      "length": 1719,
+      "certified": 64,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1235,
+       "token_convex": 372
+      },
+      "length_cost_v3": 1824
+     },
+     {
+      "knob": 0.1,
+      "length": 1719,
+      "certified": 64,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1235,
+       "token_convex": 372
+      },
+      "length_cost_v3": 1824
+     },
+     {
+      "knob": 0.2,
+      "length": 1719,
+      "certified": 64,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1235,
+       "token_convex": 372
+      },
+      "length_cost_v3": 1824
+     },
+     {
+      "knob": 0.35,
+      "length": 2282,
+      "certified": 91,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1474,
+       "token_convex": 696
+      },
+      "length_cost_v3": 2387
+     },
+     {
+      "knob": 0.5,
+      "length": 3711,
+      "certified": 139,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 1931,
+       "token_convex": 1668
+      },
+      "length_cost_v3": 3816
+     },
+     {
+      "knob": 0.75,
+      "length": 4949,
+      "certified": 193,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 2009,
+       "token_convex": 2828
+      },
+      "length_cost_v3": 5054
+     },
+     {
+      "knob": 1.0,
+      "length": 7491,
+      "certified": 256,
+      "n_inputs": 256,
+      "length_by_rule": {
+       "extract": 112,
+       "tables": 2045,
+       "token_convex": 5334
+      },
+      "length_cost_v3": 7596
+     }
+    ],
+    "full_length": 7491,
+    "full_certified": 256,
+    "boxes": 22,
+    "Q": 0.4619858076469485,
+    "Q_exact": 0.4619858076469485,
+    "Q_grid": 0.4331597222222222,
+    "cost_of_finishing": 9.822987585102123,
+    "shortest_full": 7491,
+    "seconds": 0.1,
+    "full_length_cost_v3": 7596,
+    "Q_exact_cost_v3": 0.45801215044746857
+   },
+   "cubic": {
+    "length": 5486,
+    "certified": 256,
+    "Q": 0.40017796965527624,
+    "Q_exact": 0.40017796965527624,
+    "Q_grid": 0.3333333333333333,
+    "cost_of_finishing": 13.41305140357273,
+    "shortest_full": 5486,
+    "Q_exact_cost_v3": 0.4013480361514446
+   },
+   "B_cost_v3": 74523
+  }
+ }
+}

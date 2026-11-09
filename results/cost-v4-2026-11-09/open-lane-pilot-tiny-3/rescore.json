@@ -1,0 +1,161 @@
+{
+ "run": "open-lane-pilot-tiny-3",
+ "metric_version": "scoring-v2: Q_above added 26 October 2026",
+ "driven_by": "Q_grid",
+ "metrics_available": [
+  "Q",
+  "Q_grid",
+  "Q_exact",
+  "Q_above",
+  "cost_of_finishing"
+ ],
+ "versions": {
+  "agent_model": "claude-fable-5-1",
+  "checker": "18f137d8d10160778ab5d03f568b32067e1f897c64f34cc7dcfffada654228f5",
+  "config": "f7ddab6e6a91622c0f8b041dba98963c8f8503509c1a722e9b232732b146cbfe",
+  "cost_model": "cost-v3",
+  "created": "2026-10-22T09:59:13+00:00",
+  "git": {
+   "commit": "6608098b973ea787c68307ac3780f6c60af3e703",
+   "dirty": false
+  },
+  "lean_checker": {
+   "acceptcheck": "366b75d832df2856",
+   "commit": "c11b8e40f3c8d9b78ff144de8c1edb66dc3e75bb",
+   "lean_project": "d36f4fb12b0bb567",
+   "policy": "cde74948a64643d3",
+   "toolchain": "lean:d1d9c26a539f54fe"
+  },
+  "model_folder": "7e7e94564887249c76c9f9196139bd7ffc73a975712b4bce751dad8eaddc56f1",
+  "prompt_template": "open_lane_v1",
+  "rule_set": "45712f4478a0bd0c",
+  "sandbox": "fca643a9aae8da0d7ef384d33265c304256e017e7f32474267d481c2158cc4cf"
+ },
+ "brute_force_lines": {
+  "max2_tiny-v8-s0": {
+   "c": 63.0,
+   "E": 80.0,
+   "coverage": 64,
+   "n": 64,
+   "how": "exact: the single rule's charge per input and the coverage of round 0's brute force"
+  }
+ },
+ "per_round": [
+  {
+   "after_round": 0,
+   "by_setting": {
+    "v8": {
+     "Q_median": 0.0,
+     "Q_grid_median": 0.0,
+     "Q_exact_mean": 0.0,
+     "Q_above_mean": 0.0,
+     "Q_above_worst": 0.0,
+     "cost_of_finishing_median": 1.0
+    }
+   }
+  },
+  {
+   "after_round": 1,
+   "by_setting": {
+    "v8": {
+     "Q_median": 0.40578247877829204,
+     "Q_grid_median": 0.265625,
+     "Q_exact_mean": 0.40578247877829204,
+     "Q_above_mean": 0.2519704224123598,
+     "Q_above_worst": 0.2519704224123598,
+     "cost_of_finishing_median": 3.988360814742968
+    }
+   }
+  },
+  {
+   "after_round": 2,
+   "by_setting": {
+    "v8": {
+     "Q_median": 0.45115032571916097,
+     "Q_grid_median": 0.31875,
+     "Q_exact_mean": 0.45115032571916097,
+     "Q_above_mean": 0.29522470515147825,
+     "Q_above_worst": 0.29522470515147825,
+     "cost_of_finishing_median": 3.988360814742968
+    }
+   }
+  },
+  {
+   "after_round": 3,
+   "by_setting": {
+    "v8": {
+     "Q_median": 0.4667168803344776,
+     "Q_grid_median": 0.3375,
+     "Q_exact_mean": 0.4667168803344776,
+     "Q_above_mean": 0.31534763867846277,
+     "Q_above_worst": 0.31534763867846277,
+     "cost_of_finishing_median": 3.988360814742968
+    }
+   }
+  },
+  {
+   "after_round": 4,
+   "by_setting": {
+    "v8": {
+     "Q_median": 0.5038832110095213,
+     "Q_grid_median": 0.41875,
+     "Q_exact_mean": 0.5038832110095213,
+     "Q_above_mean": 0.3633926698429019,
+     "Q_above_worst": 0.3633926698429019,
+     "cost_of_finishing_median": 5.719054242002781
+    }
+   }
+  }
+ ],
+ "final": {
+  "v8": {
+   "networks": {
+    "max2_tiny-v8-s0": {
+     "Q": 0.5038832110095213,
+     "Q_exact": 0.5038832110095213,
+     "Q_above": 0.3633926698429019,
+     "brute_force_line": {
+      "c": 63.0,
+      "E": 80.0,
+      "coverage": 64,
+      "n": 64,
+      "how": "exact: the single rule's charge per input and the coverage of round 0's brute force"
+     },
+     "points_above_line": 4,
+     "Q_grid": 0.41875,
+     "grid": {
+      "2056": 1.0,
+      "1028": 1.0,
+      "514": 0.09375,
+      "257": 0.0,
+      "128": 0.0
+     },
+     "best_accuracy": 1.0,
+     "real_accuracy": 1.0,
+     "shortest_full": 719,
+     "within": {
+      "B/10": 0.09375,
+      "B/100": 0.0,
+      "B/1000": 0.0
+     },
+     "cost_of_finishing": 5.719054242002781,
+     "fallback_cost_per_input": "exact: the single rule's charge per input",
+     "E": 80,
+     "B": 4112,
+     "points": 4
+    }
+   },
+   "Q_median": 0.5038832110095213,
+   "Q_worst": 0.5038832110095213,
+   "Q_grid_median": 0.41875,
+   "Q_grid_worst": 0.41875,
+   "Q_exact_mean": 0.5038832110095213,
+   "Q_exact_worst": 0.5038832110095213,
+   "Q_above_mean": 0.3633926698429019,
+   "Q_above_worst": 0.3633926698429019,
+   "cost_of_finishing_median": 5.719054242002781,
+   "cost_of_finishing_worst": 5.719054242002781,
+   "shortest_full_over_B_median": 0.17485408560311283
+  }
+ }
+}
