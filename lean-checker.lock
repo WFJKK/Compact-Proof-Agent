@@ -1,5 +1,5 @@
 {
- "repository": "https://github.com/WFJKK/Auto-Research-Compact-Proof-in-Lean",
+ "repository": "https://github.com/WFJKK/Compact-Proof-Checker",
  "commit": "168cb47116d447c03e2481cdce641dac93e3a8af",
  "receipt_schema": "open-lane-receipt-v1",
  "candidate_schema": "open-lane-candidate-v1",

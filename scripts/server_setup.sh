@@ -17,8 +17,8 @@ set -euo pipefail
 
 LEAN_DIR=~/Desktop/VerifiedMechanisms/LeanFormalisations/CompactCheck
 PIPE_DIR=~/Desktop/VerifiedMechanisms/CompactProofsAgent/Auto-Research-Compact-Proof
-LEAN_REPO=https://github.com/WFJKK/Auto-Research-Compact-Proof-in-Lean
-PIPE_REPO=https://github.com/WFJKK/auto-research-compact-proof
+LEAN_REPO=https://github.com/WFJKK/Compact-Proof-Checker
+PIPE_REPO=https://github.com/WFJKK/Compact-Proof-Agent
 
 echo "== system packages"
 sudo apt-get update -qq

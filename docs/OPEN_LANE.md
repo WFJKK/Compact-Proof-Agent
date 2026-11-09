@@ -5,7 +5,7 @@ file: any argument the kernel accepts counts, and a proof written in the counted
 the same units as a proof file (cost-v4; the prices of operations are cost-v3's, and cost-v4 only stopped
 charging a proof file's plan, so that the same proof costs the same in both lanes). The Lean side (the acceptance service, the counted language, the
 scoring policy) lives in the Lean project CompactCheck
-(https://github.com/WFJKK/Auto-Research-Compact-Proof-in-Lean, `docs/OPEN_LANE.md` and `docs/COUNTED.md`
+(https://github.com/WFJKK/Compact-Proof-Checker, `docs/OPEN_LANE.md` and `docs/COUNTED.md`
 there). This document is the pipeline side: how a run uses it.
 
 ## What changes in a run

@@ -23,8 +23,10 @@ from core.util import REPO_ROOT
 def _lean_project() -> Path:
     if os.environ.get("COMPACT_PROOF_LEAN"):
         return Path(os.environ["COMPACT_PROOF_LEAN"]).expanduser()
-    sibling = REPO_ROOT.parent / "auto-research-compact-proof-in-lean"
-    return sibling if sibling.is_dir() else Path("~/Desktop/VerifiedMechanisms/LeanFormalisations/CompactCheck").expanduser()
+    for name in ("Compact-Proof-Checker", "auto-research-compact-proof-in-lean"):  # its name, or a clone under its old name
+        if (REPO_ROOT.parent / name).is_dir():
+            return REPO_ROOT.parent / name
+    return Path("~/Desktop/VerifiedMechanisms/LeanFormalisations/CompactCheck").expanduser()
 
 
 LEAN = _lean_project()
