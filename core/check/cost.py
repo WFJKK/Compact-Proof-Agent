@@ -1,12 +1,14 @@
-"""Cost model cost-v3: a proof's length is the work the checker does to check it.
+"""Cost model cost-v4: a proof's length is the work the checker does on numbers to check it.
 
 Each operation on exact numbers (one multiply-add, addition, subtraction or
 comparison) counts 1. Specifically:
 
 - extract: converting the weights exactly, 1 per parameter (this is E, the
   minimum any proof pays).
-- read: reading the proof file, 1 per number, string or boolean in it.
-- tree: 1 per node of the split tree.
+- read: 1 per number the proof supplies for the checker to compute with, which
+  are the entries of its approximations: every value of a dense one, every
+  entry of a low_rank one's left and right, and the start, end and value of
+  every segment of a row_segments one.
 - contract: multiplying an a x b by a b x c matrix costs a*b*c; pushing a
   bias through costs one matrix-vector product.
 - approximate: 2 per entry of the approximated matrix (difference and
@@ -30,7 +32,13 @@ comparison) counts 1. Specifically:
   2*outputs per token in each position's set; with an approximation it costs
   what the approximation's form needs (see the approximate rule); applied to a
   box it costs 3*in*outputs.
-- symmetry: 1 per leaf, for counting the inputs it certifies.
+
+The plan costs nothing: the split tree (its positions, cuts and leaf rules),
+the contraction chains, the symmetry flag, names and notes. Walking the tree
+and counting the inputs a leaf certifies (under symmetry too) is bookkeeping
+with whole numbers, not work on the network's numbers. The proof file's size is
+capped instead: its numbers and strings, and its tree's nodes, are limited in
+proportion to the number of inputs.
 
 Networks with operations beyond linear maps (softmax attention, say) are
 evaluated by core.check.general and counted the same way, operation by
@@ -59,7 +67,8 @@ and other output, 3 per input with an exact weight or 5 with an interval weight
 other output for the minimum, and (outputs - 1) for the constant part.
 
 E is the extract cost. B is the length of the brute-force proof, which checks
-every input with the single rule and nothing else.
+every input with the single rule and nothing else: E plus the number of inputs
+times the single rule's charge.
 
 Rules adopted through the rule route (rules/<name>/, core/check/plugins.py)
 charge their per-leaf work to a category of their own, named in their rule.py,
@@ -72,7 +81,15 @@ from __future__ import annotations
 
 from collections import defaultdict
 
-VERSION = "cost-v3"
+VERSION = "cost-v4"
+# cost-v4 (9 Nov 2026) stops charging the plan: the tree (1 per node), the symmetry count (1 per accepted
+# leaf) and reading the plan (1 per number, string or boolean of the proof file outside its approximations'
+# numbers). read keeps the approximations' numbers, which cost-v3 counted the same way. Nothing else
+# changes, so a proof is shorter by its tree's nodes, its plan's scalars and, with symmetry, its accepted
+# leaves; E is unchanged and B is shorter by the brute-force tree's nodes and scalars and the file's two
+# strings. The open lane never charged the plan (a checker's code is capped, not charged; its operations on
+# numbers are charged at these prices), so the same proof now costs the same in both lanes: brute force on
+# the tiny max-of-2 network is 4,112 in both (4,323 here under cost-v3).
 # cost-v3 (16 Oct 2026) adds the token_interval rule and its two categories, tables and token_interval.
 # Nothing else changes: a proof without token_interval leaves has the same length as under cost-v2, and E
 # and B are unchanged.
@@ -82,7 +99,7 @@ VERSION = "cost-v3"
 # segments is charged (two lookups in an index that costs 1 per entry and 2 per segment to build),
 # and the error subtraction and the low-rank differences are charged. E and B are unchanged.
 
-CATEGORIES = ("extract", "read", "tree", "contract", "approximate", "single", "interval", "tables", "token_interval", "symmetry")
+CATEGORIES = ("extract", "read", "contract", "approximate", "single", "interval", "tables", "token_interval")
 # The categories of adopted rules (core/check/plugins.py adds them when it loads a rule).
 EXTRA_CATEGORIES: set[str] = set()
 

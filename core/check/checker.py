@@ -85,13 +85,13 @@ def check_proof(
     lim = limits(n)
     counter = Counter()
     try:
-        # read --------------------------------------------------------------
+        # read: the file's size is capped, not charged; the numbers it supplies are charged where they are
+        # read, in the approximations (cost-v4) ---------------------------------------------------------
         if not isinstance(proof, dict):
             raise CheckError("a proof file is a JSON object")
         n_scalars = count_scalars(proof, limit=lim["max_scalars"])
         if n_scalars > lim["max_scalars"]:
             raise CheckError(f"the proof file has more than {lim['max_scalars']} numbers and strings")
-        counter.add("read", n_scalars)
         extra = set(proof) - TOP_KEYS
         if extra:
             raise CheckError(f"unknown top-level keys {sorted(extra)}")
@@ -148,9 +148,8 @@ def check_proof(
             except ApproximationError as exc:
                 raise CheckError(f"approximation {a['name']!r}: {exc}") from exc
 
-        # tree ------------------------------------------------------------------
-        leaves, n_nodes = walk(proof["tree"], space, lim["max_nodes"])
-        counter.add("tree", n_nodes)
+        # tree: walked for free (cost-v4), its size capped by walk ------------------------------------
+        leaves, _ = walk(proof["tree"], space, lim["max_nodes"])
         allowed_leaves = leaf_rules()
         plugins = adopted_rules()
         for leaf in leaves:
@@ -245,8 +244,7 @@ def check_proof(
 
         # count -------------------------------------------------------------------
         if symmetry:
-            certified = sum(sorted_orbit_count(l.ranges) for l in accepted)
-            counter.add("symmetry", len(accepted))
+            certified = sum(sorted_orbit_count(l.ranges) for l in accepted)  # counting is free (cost-v4)
         else:
             certified = sum(l.size for l in accepted)
         mask = None
@@ -310,23 +308,9 @@ def extraction_and_brute_force_costs(folder: ModelFolder, network_id: str) -> tu
     tok = np.zeros((1, len(space)), dtype=np.int64)
     lab = np.asarray(folder.task.label(tok, folder.sizes(entry["setting"])), dtype=np.int64)
     prog.run_singles(tok, lab, one)
-    n_nodes, n_scalars = full_tree_counts(space)
-    # the proof file's other scalars: its schema and network strings
-    B = E + 2 + n_scalars + n_nodes + n * one.total
+    # the tree and the file's strings are free (cost-v4): E and one forward pass per input
+    B = E + n * one.total
     return E, B
-
-
-def full_tree_counts(space: list[int]) -> tuple[int, int]:
-    """(nodes, scalars) of full_tree(space) and its single leaves, by counting rather than building it
-    (at millions of inputs the tree itself would not fit in memory). A test compares both with the built tree."""
-    nodes, scalars, width = 0, 0, 1
-    for v in space:
-        if v == 1:
-            continue
-        nodes += width  # one split per node at this depth
-        scalars += width * v  # its position and v - 1 cuts
-        width *= v
-    return nodes + width, scalars + width  # and one leaf per input, each holding its rule name
 
 
 def main(argv=None):

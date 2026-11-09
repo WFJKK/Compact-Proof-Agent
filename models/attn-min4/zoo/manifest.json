@@ -2,10 +2,10 @@
   "model": "attn-min4",
   "networks": [
     {
-      "B": 65152067,
+      "B": 64946720,
       "E": 544,
       "correct": "attn-min4-v16-s0.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00030899254488758743,
       "id": "attn-min4-v16-s0",
       "n_inputs": 65536,
@@ -20,10 +20,10 @@
       "weights": "attn-min4-v16-s0.npz"
     },
     {
-      "B": 65152067,
+      "B": 64946720,
       "E": 544,
       "correct": "attn-min4-v16-s1.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00047802680637687445,
       "id": "attn-min4-v16-s1",
       "n_inputs": 65536,
@@ -38,10 +38,10 @@
       "weights": "attn-min4-v16-s1.npz"
     },
     {
-      "B": 65152067,
+      "B": 64946720,
       "E": 544,
       "correct": "attn-min4-v16-s2.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.0002796701155602932,
       "id": "attn-min4-v16-s2",
       "n_inputs": 65536,
@@ -56,10 +56,10 @@
       "weights": "attn-min4-v16-s2.npz"
     },
     {
-      "B": 65152067,
+      "B": 64946720,
       "E": 544,
       "correct": "attn-min4-v16-s3.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00021444667072501034,
       "id": "attn-min4-v16-s3",
       "n_inputs": 65536,
@@ -74,10 +74,10 @@
       "weights": "attn-min4-v16-s3.npz"
     },
     {
-      "B": 65152067,
+      "B": 64946720,
       "E": 544,
       "correct": "attn-min4-v16-s4.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.0007165922434069216,
       "id": "attn-min4-v16-s4",
       "n_inputs": 65536,
@@ -92,10 +92,10 @@
       "weights": "attn-min4-v16-s4.npz"
     },
     {
-      "B": 65152067,
+      "B": 64946720,
       "E": 544,
       "correct": "attn-min4-v16-s5.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00016753743693698198,
       "id": "attn-min4-v16-s5",
       "n_inputs": 65536,
@@ -110,10 +110,10 @@
       "weights": "attn-min4-v16-s5.npz"
     },
     {
-      "B": 65152067,
+      "B": 64946720,
       "E": 544,
       "correct": "attn-min4-v16-s6.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.0001702584559097886,
       "id": "attn-min4-v16-s6",
       "n_inputs": 65536,
@@ -128,10 +128,10 @@
       "weights": "attn-min4-v16-s6.npz"
     },
     {
-      "B": 65152067,
+      "B": 64946720,
       "E": 544,
       "correct": "attn-min4-v16-s7.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00020551076158881187,
       "id": "attn-min4-v16-s7",
       "n_inputs": 65536,
@@ -146,10 +146,10 @@
       "weights": "attn-min4-v16-s7.npz"
     },
     {
-      "B": 65152067,
+      "B": 64946720,
       "E": 544,
       "correct": "attn-min4-v16-s8.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00020892141037620604,
       "id": "attn-min4-v16-s8",
       "n_inputs": 65536,
@@ -164,10 +164,10 @@
       "weights": "attn-min4-v16-s8.npz"
     },
     {
-      "B": 65152067,
+      "B": 64946720,
       "E": 544,
       "correct": "attn-min4-v16-s9.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00015839445404708385,
       "id": "attn-min4-v16-s9",
       "n_inputs": 65536,
@@ -182,10 +182,10 @@
       "weights": "attn-min4-v16-s9.npz"
     },
     {
-      "B": 684152163,
+      "B": 683127984,
       "E": 1200,
       "correct": "attn-min4-v24-s0.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00013951875735074282,
       "id": "attn-min4-v24-s0",
       "n_inputs": 331776,
@@ -200,10 +200,10 @@
       "weights": "attn-min4-v24-s0.npz"
     },
     {
-      "B": 684152163,
+      "B": 683127984,
       "E": 1200,
       "correct": "attn-min4-v24-s1.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.0001230965426657349,
       "id": "attn-min4-v24-s1",
       "n_inputs": 331776,
@@ -218,10 +218,10 @@
       "weights": "attn-min4-v24-s1.npz"
     },
     {
-      "B": 684152163,
+      "B": 683127984,
       "E": 1200,
       "correct": "attn-min4-v24-s2.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00025380513397976756,
       "id": "attn-min4-v24-s2",
       "n_inputs": 331776,
@@ -236,10 +236,10 @@
       "weights": "attn-min4-v24-s2.npz"
     },
     {
-      "B": 684152163,
+      "B": 683127984,
       "E": 1200,
       "correct": "attn-min4-v24-s3.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00013805515482090414,
       "id": "attn-min4-v24-s3",
       "n_inputs": 331776,
@@ -254,10 +254,10 @@
       "weights": "attn-min4-v24-s3.npz"
     },
     {
-      "B": 684152163,
+      "B": 683127984,
       "E": 1200,
       "correct": "attn-min4-v24-s4.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.0004638910759240389,
       "id": "attn-min4-v24-s4",
       "n_inputs": 331776,
@@ -272,10 +272,10 @@
       "weights": "attn-min4-v24-s4.npz"
     },
     {
-      "B": 684152163,
+      "B": 683127984,
       "E": 1200,
       "correct": "attn-min4-v24-s5.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00016405370843131095,
       "id": "attn-min4-v24-s5",
       "n_inputs": 331776,
@@ -290,10 +290,10 @@
       "weights": "attn-min4-v24-s5.npz"
     },
     {
-      "B": 684152163,
+      "B": 683127984,
       "E": 1200,
       "correct": "attn-min4-v24-s6.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.0001193984571727924,
       "id": "attn-min4-v24-s6",
       "n_inputs": 331776,
@@ -308,10 +308,10 @@
       "weights": "attn-min4-v24-s6.npz"
     },
     {
-      "B": 684152163,
+      "B": 683127984,
       "E": 1200,
       "correct": "attn-min4-v24-s7.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00016638684610370547,
       "id": "attn-min4-v24-s7",
       "n_inputs": 331776,
@@ -326,10 +326,10 @@
       "weights": "attn-min4-v24-s7.npz"
     },
     {
-      "B": 684152163,
+      "B": 683127984,
       "E": 1200,
       "correct": "attn-min4-v24-s8.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00022423631162382662,
       "id": "attn-min4-v24-s8",
       "n_inputs": 331776,
@@ -344,10 +344,10 @@
       "weights": "attn-min4-v24-s8.npz"
     },
     {
-      "B": 684152163,
+      "B": 683127984,
       "E": 1200,
       "correct": "attn-min4-v24-s9.correct.npy",
-      "cost_model": "cost-v3",
+      "cost_model": "cost-v4",
       "final_loss": 0.00016286762547679245,
       "id": "attn-min4-v24-s9",
       "n_inputs": 331776,

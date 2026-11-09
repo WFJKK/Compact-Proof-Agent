@@ -356,12 +356,52 @@ def test_count_scalars_and_counter():
     assert count_scalars({"a": [1, 2, {"b": "x", "c": None}], "d": True}) == 4
     c = Counter()
     c.add("single", 3)
-    c.add("tree", 2)
-    assert c.total == 5 and c.as_dict() == {"single": 3, "tree": 2}
+    c.add("contract", 2)
+    assert c.total == 5 and c.as_dict() == {"single": 3, "contract": 2}
     with pytest.raises(ValueError):
         c.add("magic", 1)
     with pytest.raises(ValueError):
         c.add("single", -1)
+    for plan in ("tree", "symmetry"):  # the plan is free under cost-v4: nothing may charge it
+        with pytest.raises(ValueError):
+            c.add(plan, 1)
+
+
+def test_the_plan_is_free_and_read_counts_the_numbers_a_proof_supplies(zoo):
+    """cost-v4: the tree, the leaf rules, the symmetry flag, names and notes cost nothing; read is 1 per
+    number of an approximation's form. So a proof's length is E plus its rules' work on numbers, as in the
+    open lane (a checker's code is capped, not charged), and brute force is E plus one forward pass per input."""
+    nid = "perfect"
+    E, B = extraction_and_brute_force_costs(zoo, nid)
+    brute = check_proof(brute_force_proof(zoo, nid), zoo, nid)
+    per_input = brute["length_by_rule"]["single"] // 25
+    assert brute["length_by_rule"] == {"extract": E, "single": 25 * per_input} and brute["length"] == B == E + 25 * per_input
+    # a large tree of skip leaves, with notes, costs E alone
+    skips = check_proof(P(nid, full_tree([V, V], leaf={"leaf": "skip"}), notes="a plan costs nothing"), zoo, nid)
+    assert skips["status"] == "ok" and skips["length"] == E and skips["length_by_rule"] == {"extract": E}
+    # symmetry: the 15 sorted inputs' forward passes, and counting their orbits is free
+    sym = check_proof(P(nid, sorted_tree(V), symmetry=True), zoo, nid)
+    assert sym["certified"] == 25 and sym["length_by_rule"] == {"extract": E, "single": 15 * per_input}
+    # an approximation's numbers are read: a dense form of the contracted 5 x 5 map has 25
+    con = [{"name": "M", "chain": ["inp", "out"]}]
+    W = load_contracted(zoo, nid)
+    values = [[str(Fraction(round(float(x) * 16), 16)) for x in row] for row in W]  # dyadic, near W
+    dense = check_proof(P(nid, {"leaf": "skip"}, contract=con, approximate=[{"name": "A", "of": "M", "form": "dense", "values": values}]), zoo, nid)
+    assert dense["status"] == "ok" and dense["length_by_rule"]["read"] == 25
+    segs = [[[0, 2, values[i][0]], [3, 4, values[i][3]]] for i in range(5)]
+    rows = check_proof(P(nid, {"leaf": "skip"}, contract=con, approximate=[{"name": "A", "of": "M", "form": "row_segments", "rows": segs}]), zoo, nid)
+    assert rows["status"] == "ok" and rows["length_by_rule"]["read"] == 3 * 10
+
+
+def load_contracted(folder, nid):
+    """The stub's contracted map out @ inp in float64 (outputs x inputs)."""
+    from core.zoo import load_weights
+
+    w = load_weights(folder, nid)
+    keys = sorted(w)
+    inp = next(np.asarray(w[k], dtype=np.float64) for k in keys if k.startswith("inp") and k.endswith("weight"))
+    out = next(np.asarray(w[k], dtype=np.float64) for k in keys if k.startswith("out") and k.endswith("weight"))
+    return out @ inp
 
 
 def test_symmetry_needs_a_symmetric_label(tmp_path):
@@ -420,7 +460,8 @@ def test_an_exact_segment_approximation_is_never_cheaper_than_the_dense_check(zo
 
 
 def test_approximation_ranges_are_charged_for_what_they_do():
-    """cost-v2: each form's range charge is what the checker does, so none is cheaper than its work."""
+    """cost-v2: each form's range charge is what the checker does, so none is cheaper than its work; cost-v4:
+    the numbers of the form are read, 1 each."""
     from core.check.approx import Approximation
 
     rng = np.random.default_rng(3)
@@ -431,7 +472,7 @@ def test_approximation_ranges_are_charged_for_what_they_do():
     def charged(spec, lo, hi):
         c = Counter()
         a = Approximation("A", "M", spec, W, c)
-        setup = c.total
+        setup = c.as_dict()
         c = Counter()
         out = a.row_min_diffs(0, lo, hi, c)
         return setup, c.total, out
@@ -439,7 +480,7 @@ def test_approximation_ranges_are_charged_for_what_they_do():
     # dense: 2 per token per output, like the exact check
     dense = {"form": "dense", "values": [[str(x) for x in row] for row in Wf]}
     setup, cost, out = charged(dense, 1, 4)
-    assert setup == 2 * n_out * n_in and cost == 2 * n_out * 4
+    assert setup == {"approximate": 2 * n_out * n_in, "read": n_out * n_in} and cost == 2 * n_out * 4
     assert all(out[j] == min(Wf[0, t] - Wf[j, t] for t in range(1, 5)) for j in range(n_out))
 
     # low_rank: 2r per token plus 3r per output (difference, sign test, multiply-add per factor)
@@ -447,12 +488,13 @@ def test_approximation_ranges_are_charged_for_what_they_do():
     left = [[str(x) for x in row] for row in Wf[:, :r]]
     right = [[1 if i == k else 0 for k in range(n_in)] for i in range(r)]
     setup, cost, _ = charged({"form": "low_rank", "left": left, "right": right}, 0, 5)
-    assert setup == n_out * r * n_in + 2 * n_out * n_in and cost == 2 * r * 6 + 3 * n_out * r
+    assert setup == {"approximate": n_out * r * n_in + 2 * n_out * n_in, "read": n_out * r + r * n_in}
+    assert cost == 2 * r * 6 + 3 * n_out * r
 
     # row_segments: setup 3 per entry plus 2 per segment; a range 2 per merge step plus 2 per row
     rows = [[[0, 2, "1"], [3, 5, "0"]], [[0, 5, "0"]], [[0, 0, "1"], [1, 5, "-1"]], [[0, 3, "1/2"], [4, 5, "1/2"]]]
     setup, cost, out = charged({"form": "row_segments", "rows": rows}, 0, 5)
-    assert setup == 3 * n_out * n_in + 2 * 7
+    assert setup == {"approximate": 3 * n_out * n_in + 2 * 7, "read": 3 * 7}
     # merge steps of row 0 (ends 2, 5) against rows: 0 -> 2, 1 -> 2, 2 -> 3, 3 -> 3; two lookups per row plus the label row
     assert cost == 2 * (2 + 2 + 3 + 3) + 2 * (n_out + 1)
     assert list(out) == [Fraction(0), Fraction(0), Fraction(0), Fraction(-1, 2)]
@@ -491,13 +533,3 @@ def test_segments_are_located_by_index(zoo):
             out = a.row_min_diffs(l, lo, hi, Counter())
             assert all(out[j] == min(P[l, t] - P[j, t] for t in range(lo, hi + 1)) for j in range(n_out))
 
-
-def test_full_tree_counts_match_the_built_tree():
-    from core.check.checker import full_tree_counts
-    from core.check.cost import count_scalars
-    from core.check.proof import full_tree, walk
-
-    for space in ([3], [4, 4], [2, 3, 5], [3, 1, 4], [2, 2, 2, 2]):
-        tree = full_tree(space)
-        _, n_nodes = walk(tree, space, 10**6)
-        assert full_tree_counts(space) == (n_nodes, count_scalars(tree))

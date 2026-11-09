@@ -62,8 +62,11 @@ class Approximation:
         n_out, n_in = W.shape
         self.n_out, self.n_in = n_out, n_in
         Wf = W.to_fractions()
+        # read (cost-v4): 1 per number of P's form, the numbers the proof supplies; its name, map and form
+        # are plan, which is free
         if self.form == "dense":
             self.P = _matrix(spec.get("values"), n_out, n_in, "values")
+            counter.add("read", n_out * n_in)
             self.eps = max(abs(x) for x in (Wf - self.P).reshape(-1))
             counter.add("approximate", 2 * n_out * n_in)
         elif self.form == "low_rank":
@@ -72,6 +75,7 @@ class Approximation:
             if not 0 < r <= min(n_out, n_in):  # a rank above min(rows, cols) is never needed
                 raise ApproximationError(f"low_rank inner dimension must be between 1 and {min(n_out, n_in)}, not {r}")
             self.G = _matrix(spec.get("right"), r, n_in, "right")
+            counter.add("read", n_out * r + r * n_in)
             P = np.dot(self.F, self.G)
             counter.add("approximate", n_out * r * n_in)
             self.eps = max(abs(x) for x in (Wf - P).reshape(-1))
@@ -115,6 +119,7 @@ class Approximation:
                 self.index.append(index)
                 n_segments += len(starts)
             self.eps = eps
+            counter.add("read", 3 * n_segments)  # each segment's start, end and value
             # Per entry: the difference and comparison for eps (2) and the index entry (1); per segment:
             # its two error terms against the running eps (2).
             counter.add("approximate", 3 * n_out * n_in + 2 * n_segments)

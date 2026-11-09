@@ -19,3 +19,8 @@ working from the repositories can read them. Each is dated; later decisions supe
   the room above it, with the review's corrections (an achievable line from the run's own baseline, the
   positive part over exact breakpoints, patience by gain, what the number means, versions kept with
   re-scored runs).
+- [same-proof-same-cost.md](same-proof-same-cost.md) (9 November 2026): cost-v4. The rules lane stops
+  charging its plan (tree nodes, the proof file's plan entries, the symmetry count), as the open lane never
+  charged a checker's code, so the same proof costs the same in both lanes (brute force on the tiny max-of-2
+  network: 4,112 in both; 4,323 in the rules lane under cost-v3). Replaces the description charge planned in
+  frozen-transfer.md.

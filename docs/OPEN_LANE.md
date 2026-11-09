@@ -2,7 +2,8 @@
 
 The open lane lets the agent prove things about a network in Lean instead of writing a split-tree proof
 file: any argument the kernel accepts counts, and a proof written in the counted language gets a length in
-the same cost-v3 units as a proof file. The Lean side (the acceptance service, the counted language, the
+the same units as a proof file (cost-v4; the prices of operations are cost-v3's, and cost-v4 only stopped
+charging a proof file's plan, so that the same proof costs the same in both lanes). The Lean side (the acceptance service, the counted language, the
 scoring policy) lives in the Lean project CompactCheck
 (https://github.com/WFJKK/Auto-Research-Compact-Proof-in-Lean, `docs/OPEN_LANE.md` and `docs/COUNTED.md`
 there). This document is the pipeline side: how a run uses it.
@@ -183,15 +184,17 @@ by Q_above like the open-lane pilots. Every proof that enters the frontier is ch
 during the run (`lean_spot_check`; the tiny model folders' `lean_check` runs `scripts/lean_check_proof.py`
 against the Lean project at `COMPACT_PROOF_LEAN` or the pilots' default path, and a disagreement halts the
 run), and `scripts/check_run.py` of the Lean project checks every proof afterwards. The counts are
-Lean-verified; the lengths are the Python checker's accounting (cost-v3), which the Lean operations
+Lean-verified; the lengths are the Python checker's accounting (cost-v4), which the Lean operations
 reproduce leaf by leaf (`scripts/test_gtokens_cost.py` there).
 
 ## What a scored proof costs
 
 Length = the bill of the checker on the protected weights + E (one per weight entry) + one per certificate
-number. The counted operations charge what cost-v3 charges the corresponding leaf (`single`: one exact
+number. The counted operations charge what a proof file's leaf pays for the same work (`single`: one exact
 forward pass; `interval`: the interval rule on a box; `gsingle`: one forward pass of a network with
-attention, at cost-v3's prices for its operations). There is no `tree` charge: a scored proof's structure
-is its program, bounded by the service's description-size budget instead. So the open lane's brute force on the tiny
-network is 4,112 against B = 4,323 for the proof-file brute force (the difference is the tree and read
-charges), and the two lanes' lengths are comparable but not identical on the same argument.
+attention, at the same prices for its operations). There is no `tree` charge: a scored proof's structure
+is its program, bounded by the service's description-size budget instead. Since cost-v4 (9 November 2026)
+a proof file's plan is free too (its tree, rules and flags; only the numbers it supplies, in its
+approximations, are read at 1 each), so the same proof costs the same in both lanes: brute force on the
+tiny network is 4,112 in both. Under cost-v3 the proof file paid 4,323 for it (73 tree nodes and 138
+numbers and strings read).

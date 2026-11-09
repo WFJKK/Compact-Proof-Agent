@@ -171,7 +171,7 @@ def test_q_exact_is_the_clipped_log_area_of_the_verified_frontier():
 
     archive = Path(__file__).resolve().parent.parent / "results" / "open-lane-pilot-tiny-3" / "archive.jsonl"
     records = [json.loads(l) for l in archive.read_text().splitlines() if l.strip()]
-    E, B, n = 80, 4323, 64
+    E, B, n = 80, 4323, 64  # cost-v3's B, with which the review computed these numbers (cost-v4's is 4,112)
     for upto, expected in ((3, 0.4734), (4, 0.5101)):
         pts = frontier([r for r in records if 0 < r["round"] <= upto])["max2_tiny-v8-s0"]
         assert round(q_exact(pts, E, B), 4) == expected
@@ -265,7 +265,9 @@ def test_q_above_counts_only_what_beats_the_brute_force_line():
 
 def test_pilot_2_rescored_under_q_above():
     """The linear pilot's archive under Q_above (core.rescore): the line is 63 k + 80 up to 64, and the agent's
-    frontier scores 0.2520 after round 1 and 0.3634 after round 4 (Q_exact 0.4132 and 0.5101)."""
+    frontier scores 0.2520 after round 1 and 0.3634 after round 4 (Q_exact 0.4058 and 0.5039 with cost-v4's
+    B = 4,112; 0.4132 and 0.5101 with cost-v3's 4,323, the review's numbers of 22 October). Q_above does not
+    move with B: the line certifies every input from 4,112 on, so there is no room above it between the two."""
     from core.rescore import rescore
 
     r = rescore(Path(__file__).resolve().parent.parent / "results" / "open-lane-pilot-tiny-3")
@@ -273,6 +275,7 @@ def test_pilot_2_rescored_under_q_above():
     assert (line["c"], line["E"], line["coverage"]) == (63.0, 80, 64) and line["how"].startswith("exact")
     by_round = {row["after_round"]: row["by_setting"]["v8"] for row in r["per_round"]}
     assert round(by_round[1]["Q_above_mean"], 4) == 0.2520 and round(by_round[4]["Q_above_mean"], 4) == 0.3634
-    assert round(by_round[4]["Q_exact_mean"], 4) == 0.5101 and by_round[0]["Q_above_mean"] == 0.0
+    assert round(by_round[1]["Q_exact_mean"], 4) == 0.4058 and round(by_round[4]["Q_exact_mean"], 4) == 0.5039
+    assert by_round[0]["Q_above_mean"] == 0.0
     assert r["driven_by"] == "Q_grid" and r["versions"]["cost_model"] == "cost-v3"
 

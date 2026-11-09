@@ -55,7 +55,7 @@ RULES = {
         "scores, softmax weights) become entrywise intervals, and each term is bounded over its own tokens and "
         "weight interval separately, which is sound but looser. Only for networks beyond linear maps."
     ),
-    "skip": 'Leaf rule {"leaf": "skip"}. Certifies nothing and costs almost nothing.',
+    "skip": 'Leaf rule {"leaf": "skip"}. Certifies nothing and costs nothing.',
     "contract": (
         'Global rule. "contract": [{"name": N, "chain": [a, b, ...]}] replaces consecutive linear maps '
         "a, then b, ... (each feeding only the next) by their exact product, computed once in the "
@@ -78,7 +78,7 @@ RULES = {
         'matrix), low_rank ("left": outputs x r, "right": r x inputs) or row_segments ("rows": for '
         "each output row, [start, end, value] triples covering every column in order). The checker "
         "computes eps = max |M - P| exactly, at 2 per entry (row_segments: 3 per entry plus 2 per "
-        "segment, for a column index), plus the file's numbers read. Interval leaves with \"approx\": P "
+        "segment, for a column index), plus 1 per number read from P's form. Interval leaves with \"approx\": P "
         "then bound the minimum over a position's tokens t of M[l,t] - M[j,t] by the same minimum for P, "
         "minus 2 eps, computed from P's form: dense costs 2 per token per output (like the exact check); "
         "row_segments costs 2 per merge step of the two rows' segments plus 2 per output to locate its "
