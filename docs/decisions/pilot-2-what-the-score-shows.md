@@ -50,6 +50,6 @@ What stops the one-network kind is a method rather than a proof: one general lay
 
 ## Cost-model changes worth considering before v64
 
-- Charge description size at a rate calibrated so that the brute-force checker's description costs what its proof-file tree costs in the legacy lane, making the two lanes consistent and making proof-specific information cost something.
+- Charge description size at a rate calibrated so that the brute-force checker's description costs what its proof-file tree costs in the fixed rules lane, making the two lanes consistent and making proof-specific information cost something.
 - Price a numeral by its bits rather than a flat 1.
 - Record the bill per category in every receipt, so any proof can be re-priced offline.

@@ -93,8 +93,8 @@ def test_brute_force_certifies_the_manifest_count_at_length_b():
 
 @pytest.mark.skipif(not (Path(os.environ.get("COMPACT_PROOF_LEAN", "~/Desktop/VerifiedMechanisms/LeanFormalisations/CompactCheck")).expanduser() / ".lake" / "build" / "bin" / "compactcheck").is_file(),
                     reason="needs the Lean project (COMPACT_PROOF_LEAN or the pilots' default path) with `lake build compactcheck`")
-def test_a_legacy_pilot_on_the_tiny_attention_network_is_lean_checked_and_scored_by_q_above(tmp_path):
-    """The legacy lane's counterpart of the open-lane pilots (config/legacy-pilot-attn-*-tiny.yaml): one agent
+def test_a_fixed_rules_pilot_on_the_tiny_attention_network_is_lean_checked_and_scored_by_q_above(tmp_path):
+    """The fixed rules lane's counterpart of the open-lane pilots (config/fixed-rules-pilot-attn-*-tiny.yaml): one agent
     round from a fake response whose recipe uses token_interval leaves (one box per largest token with the
     other position below it, and one-input token leaves elsewhere), run with lean_spot_check on. The proof
     enters the frontier, the Lean checker (scripts/lean_check_proof.py through the model folder's lean_check)
@@ -123,8 +123,8 @@ def make_proof(weights, info, knob):
             f"PREDICTION: Full accuracy below B.\n\nKNOB: Unused.\n\nRECIPE:\n{recipe}\n\nNOTES: boxes by the largest token.\n")
     resp = tmp_path / "r.md"
     resp.write_text(text)
-    base = yaml.safe_load((Path(__file__).resolve().parent.parent / "config" / "legacy-pilot-attn-max2-tiny.yaml").read_text())
-    cfg = {**base, "run_id": "legacy-tiny-test", "backend": "fake", "fake_responses": [str(resp)], "rounds_max": 1,
+    base = yaml.safe_load((Path(__file__).resolve().parent.parent / "config" / "fixed-rules-pilot-attn-max2-tiny.yaml").read_text())
+    cfg = {**base, "run_id": "fixed-rules-tiny-test", "backend": "fake", "fake_responses": [str(resp)], "rounds_max": 1,
            "runs_dir": str(tmp_path / "runs"), "sandbox": "process", "knob_values": [1]}
     for k in ("agent_model", "effort", "api_retries"):
         cfg.pop(k, None)

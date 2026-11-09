@@ -1,4 +1,4 @@
-# The baseline condition of the pilot: the one-response loop on the same instance with the legacy lane
+# The baseline condition of the pilot: the one-response loop on the same instance with the fixed rules lane
 # limited to single and skip (no open lane, no tools). Compare its frontier with open-lane-pilot-tiny's.
 run_id: open-lane-baseline-tiny
 model: tests/max2_tiny

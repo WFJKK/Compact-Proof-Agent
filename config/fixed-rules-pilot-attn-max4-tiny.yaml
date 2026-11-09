@@ -1,4 +1,4 @@
-# The legacy lane on the tiny attention max-of-4 network (tests/attn_max4_tiny, 256 inputs), the
+# The fixed rules lane on the tiny attention max-of-4 network (tests/attn_max4_tiny, 256 inputs), the
 # counterpart of the open-lane pilots on it (open-lane-pilot-attn-max4-tiny.yaml): the agent writes Python recipes
 # that produce proof files, and the checker's rules do the mathematics. The rules are those the Lean checker
 # has (single, interval, token_interval, skip; not token_convex), and every proof that enters the frontier is
@@ -6,7 +6,7 @@
 # scripts/lean_check_proof.py against the Lean project at COMPACT_PROOF_LEAN or the pilots' default path):
 # the counts are Lean-verified, the lengths are the Python checker's accounting (cost-v3), which Lean's
 # counted operations reproduce leaf by leaf. Scored by Q_above, as the open-lane pilots; up to 7 rounds.
-run_id: legacy-pilot-attn-max4-tiny
+run_id: fixed-rules-pilot-attn-max4-tiny
 model: tests/attn_max4_tiny
 backend: claude_code
 agent_model: claude-fable-5-1

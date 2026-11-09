@@ -29,7 +29,7 @@ A high held-out score shows transferable verified efficiency: the frozen method 
 
 ## The cost model to freeze first (cost-v4)
 
-(Note of 9 November 2026: the name cost-v4 went to a different change, the rules lane no longer charging its plan, and that change replaces the calibrated description charge below; see same-proof-same-cost.md.)
+(Note of 9 November 2026: the name cost-v4 went to a different change, the fixed rules lane no longer charging its plan, and that change replaces the calibrated description charge below; see same-proof-same-cost.md.)
 
 Before any held-out number: a free tensor-size read (the pilot's guard did two jobs, well-formedness and certifying one input with its mirror, so the saving is 63 minus whatever certifies those inputs instead; rebuild the proof and measure, never subtract); the audited match-compiler constants and the graph constructors allowed; numerals priced by bits; a calibrated charge for the checker's description, versioned; bills tallied by the operation the service executed, with the candidate's label secondary. Then remeasure the agent's proofs and the cubic baseline ported to the counted language on the same accounting; the adversarial regression tests keep running against every change.
 

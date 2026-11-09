@@ -85,7 +85,7 @@ KNOWLEDGE_TEXT = {
     ),
     "maximum": (
         "This run is the maximum-knowledge condition: a checker may use every field of Interp, including two of "
-        "the legacy lane's rules for networks beyond linear maps, supplied as operations.\n"
+        "the fixed rules lane's rules for networks beyond linear maps, supplied as operations.\n"
         "I.ginterval graph task box bounds the network over a box of inputs (per position, the tokens lo..hi) "
         "with interval arithmetic and answers true when the label, constant on the box, has a lower bound above "
         "every other output's upper bound; a box whose label is not constant answers false and costs nothing. "

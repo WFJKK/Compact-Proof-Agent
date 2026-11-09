@@ -9,7 +9,7 @@ backend: claude_code
 agent_model: claude-fable-5-1
 effort: xhigh
 prompt_template: open_lane_v1
-# The legacy lane (round 0's baselines) limited to single and skip; explicit, as the ticket asks.
+# The fixed rules lane (round 0's baselines) limited to single and skip; explicit, as the ticket asks.
 rule_set: [single, skip]
 # The primary objective of the pilot, the same in every condition: accuracy at fixed budgets.
 metric: Q_grid

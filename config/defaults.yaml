@@ -104,7 +104,7 @@ lean_spot_check: false
 # The open lane (docs/OPEN_LANE.md): instead of one recipe per round, the agent
 # works with tools (lean_check, run_python, search_library, submit_candidate) and
 # submits Lean proofs about a network to the Lean project's acceptance service;
-# the receipts become the round's records. Off by default: the legacy loop above
+# the receipts become the round's records. Off by default: the fixed rules lane's loop above
 # is unchanged. With it on, rule_set must be written in the run config itself (it
 # limits round 0's baselines; the agent gets no rule descriptions), backend is
 # fake (replaying the scripts in fake_scripts) or claude_code (the CLI with the
@@ -128,7 +128,7 @@ open_lane:
   example: examples/open_lane/max2_tiny_scored/Candidate/Max2TinyScored.lean
   extra_sources: []
   # The knowledge condition (the Lean project's docs/COUNTED.md, "Knowledge conditions"): minimal is the base
-  # counted language; maximum adds the legacy lane's rules for groups of inputs on networks beyond linear maps
+  # counted language; maximum adds the fixed rules lane's rules for groups of inputs on networks beyond linear maps
   # as operations (the interval rule, I.ginterval, so far). The service checks a checker against the
   # condition's allowlist and records the condition in every receipt and in its policy digest.
   knowledge: minimal

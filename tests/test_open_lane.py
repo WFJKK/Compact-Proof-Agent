@@ -522,7 +522,7 @@ def test_the_open_lane_prompt_builds_for_every_metric(tmp_path, monkeypatch, met
 
 def test_the_knowledge_condition_reaches_every_service_call_and_the_prompt(tmp_path):
     """open_lane.knowledge chooses the experimental condition (minimal: the base counted language; maximum: plus
-    the legacy lane's rules for groups of inputs as operations). The session passes it to every call of the
+    the fixed rules lane's rules for groups of inputs as operations). The session passes it to every call of the
     service, which checks a checker against that condition's allowlist; the prompt says which condition the
     run is; the config refuses anything else."""
     from core.open_lane.prompt import static_values

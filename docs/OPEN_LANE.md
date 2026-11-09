@@ -51,7 +51,7 @@ response:
   A receipt certifying more inputs than the network gets right halts the run, as the Python checker's
   invariant does.
 - Round 0 still replays the baselines named in the config as proof files (`rule_set` must be written in
-  the config: the pilot uses `[single, skip]`); the legacy one-response loop is the baseline condition,
+  the config: the pilot uses `[single, skip]`); the fixed rules lane's one-response loop is the baseline condition,
   run separately (`config/open-lane-baseline-tiny.yaml`).
 - The stall trigger: after `stall_rounds` agent rounds without an accepted submission, the prompt asks
   for a change of approach rather than a refinement. Patience stops an open-lane run after `patience`
@@ -127,7 +127,7 @@ approximation.
 - `fake`: `open_lane.fake_scripts` lists JSON scripts of tool calls (`core/open_lane/backends.py`),
   replayed in order against the real tools and service; everything else is as in a real run. The tests
   (`tests/test_open_lane.py`) run the scored brute-force example through it.
-- `claude_code`: the Claude Code CLI headless, as the legacy backend, with the tools attached as an MCP
+- `claude_code`: the Claude Code CLI headless, as in the fixed rules lane, with the tools attached as an MCP
   server over stdio (`core/open_lane/mcp_server.py`, started by the CLI with the command in `mcp.json`) and
   nothing else: no built-in tools, no files, no project settings, `--max-turns open_lane.max_turns`, the
   session's wall clock `open_lane.worker_seconds`. The CLI's environment has the API keys removed. The
@@ -150,7 +150,7 @@ The tiny attention pilots (`config/open-lane-pilot-attn-{max2,min2,max4,min4}-ti
 `tests/attn_*_tiny`) need the Lean project at the commit of `lean-checker.lock` (the general single rule,
 `I.gsingle`) and one more target, `lake build CompactCheck.CountedGeneralSound`. Each comes in two
 experimental conditions that differ only in `open_lane.knowledge`: the configs above are the
-minimal-knowledge condition (the base counted language), and the `-maximum` configs add the legacy lane's
+minimal-knowledge condition (the base counted language), and the `-maximum` configs add the fixed rules lane's
 rules for groups of inputs on attention networks as operations (the interval rule `I.ginterval` and the
 token_interval rule `I.gtokenIntervals`, a list of boxes per call). A maximum run's worked example is a
 demonstration of `gtokenIntervals` on three boxes of the other task's network of the same architecture
@@ -177,7 +177,7 @@ accepted, or the archive recording transparently why none was.
 
 For runs that must survive a laptop going offline, docs/SERVER.md sets up a small Linux server.
 
-The legacy lane's counterpart of these pilots, for the comparison: `config/legacy-pilot-attn-*-tiny.yaml`.
+The fixed rules lane's counterpart of these pilots, for the comparison: `config/fixed-rules-pilot-attn-*-tiny.yaml`.
 The agent writes Python recipes that produce proof files and the checker's rules do the mathematics, with
 the rules the Lean checker has (`single`, `interval`, `token_interval`, `skip`; not `token_convex`), scored
 by Q_above like the open-lane pilots. Every proof that enters the frontier is checked by the Lean checker

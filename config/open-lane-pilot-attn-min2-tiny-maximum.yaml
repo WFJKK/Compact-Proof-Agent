@@ -1,4 +1,4 @@
-# The maximum-knowledge condition of open-lane-pilot-attn-min2-tiny.yaml: the same run with the legacy lane's
+# The maximum-knowledge condition of open-lane-pilot-attn-min2-tiny.yaml: the same run with the fixed rules lane's
 # rules for groups of inputs on attention networks as operations (I.ginterval and I.gtokenIntervals). The worked
 # example is a demonstration of gtokenIntervals on three boxes of the max2 network of the same architecture, not
 # a proof of this run's network (docs/OPEN_LANE.md). Everything else is identical, so the two runs differ only in
@@ -10,7 +10,7 @@ backend: claude_code
 agent_model: claude-fable-5-1
 effort: xhigh
 prompt_template: open_lane_v3
-# The legacy lane (round 0's baselines) limited to single and skip; explicit, as the ticket asks.
+# The fixed rules lane (round 0's baselines) limited to single and skip; explicit, as the ticket asks.
 rule_set: [single, skip]
 # The score the agent is shown and asked to raise: the verified frontier's log-area above the brute-force line,
 # over the room above it (docs/decisions/q-above.md). Brute force on any subset of the inputs scores 0.
